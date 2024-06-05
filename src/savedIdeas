@@ -1,0 +1,26 @@
+    {/* Heading */}
+        <div className="flex flex-col text-center space-y-28 pt-72">
+          <div className="text-8xl text-[#6C372E] font-medium"> Hello there! </div> 
+
+          {/* Aceternity Comp Sparkles */}
+          <div className="">
+            <div className="font-serif text-6xl text-[#6C372E]"> I'm Shruthi Yenamagandla </div>
+            <div className="min-w-screen flex flex-col items-center justify-center overflow-hidden rounded-md">
+              <div className="w-[40rem] h-40 relative">        
+                {/* Core component */}
+                <SparklesCore
+                  background="transparent"
+                  minSize={0.4}
+                  maxSize={1}
+                  particleDensity={1200}
+                  className="w-full h-full"
+                  particleColor="#ff3d1a"
+                />
+                {/* Radial Gradient to prevent sharp edges */}
+                <div className="absolute inset-0 w-full h-ful [mask-image:radial-gradient(350px_200px_at_top,transparent_20%,white)]"></div>
+              </div>
+            </div>
+          </div>
+          {/* Aceternity Comp Sparkles End*/}
+        </div>
+    {/* Heading End*/}
