@@ -28,38 +28,38 @@ export function App() {
     <>
       {/* Work here */}
       {/* Overall Page */}
-      <div className="flex flex-col justify-center overflow-y-auto min-h-screen bg-gradient-to-b from-white to-[#FFD0C8]"> 
+      <div className="flex flex-col justify-center overflow-y-auto min-h-screen bg-gradient-to-b from-[#ffd2ca] via-[#ffdcd6] to-[#fff1f1]"> 
 
         {/* HEADER */}
-        <header className="sticky top-0 h-[80px] shadow-xl z-30 bg-[#ffece9] flex items-center">
+        <header className="sticky top-0 h-[70px] shadow-xl z-30 bg-[#ffece9] flex items-center">
           <div className="flex items-center justify-between w-full px-10">
-            <img src={logo} alt="Logo" className="h-16" />
+            <img src={logo} alt="Logo" className="h-12" />
             <div className="flex space-x-5 ">
               <button className="font-bold py-3 px-5 cursor-pointer transform hover:-translate-y-1 duration-100 text-[#6C372E]">About Me</button>
               <button className="font-bold py-3 px-5 cursor-pointer transform hover:-translate-y-1 duration-100 text-[#6C372E]">Skills</button>
               <button className="font-bold py-3 px-5 cursor-pointer transform hover:-translate-y-1 duration-100 text-[#6C372E]">Projects</button>
-              <button className="font-bold py-3 px-5 cursor-pointer transform hover:-translate-y-1 duration-100 text-[#6C372E] border border-[#6C372E] rounded-3xl">Contact</button>
+              <button className="font-bold py-1 px-5 cursor-pointer transform hover:-translate-y-1 duration-100 text-[#6C372E] border border-[#6C372E] rounded-3xl">Contact</button>
             </div>
           </div>
         </header>
         {/* HEADER END */}
         
         {/* INTRO */}
-        <div className="flex flex-col items-center justify-center min-w-full bg-gradient-to-b from-[#f7aa9e]">
-          <div className="">
+        <div className="relative">
             <SparklesCore
               id="tsparticlesfullpage"
               background="transparent"
-              minSize={2.0}
-              maxSize={3.4}
+              minSize={1.5}
+              maxSize={3.0}
               particleDensity={100}
-              className="w-full h-full"
+              className="w-[1600px] h-[750px]"
               particleColor="ffffff"I
             />
-          </div>
+        </div>
+        <div className="absolute inset-0 mt-[80px] flex flex-col items-center justify-center min-w-full">
           <div className="flex flex-col space-y-28 pt-0">
             <motion.div
-              className="tracking-wider text-8xl text-[#6C372E] font-medium text-center"
+              className="tracking-wider text-[180px] text-[#6C372E] text-center"
               initial={{ opacity: 0, y: 50 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{
@@ -67,14 +67,16 @@ export function App() {
                 duration: 2.5,
                 ease: "easeInOut",
               }}>
-              Hello there!
+              <span className="relative right-[100px]">Hello,</span> 
+              <br />
+              <span className="relative left-[100px] italic">there!</span>
             </motion.div>
           </div>
         </div>
         {/* INTRO END */}
 
-        <div className="flex mt-[300px]">
-          <div className="font-serif text-xl text-[#6C372E] font-medium">
+        <div className="flex mt-[100px]">
+          <div className="text-xl text-[#6C372E] font-medium">
             Build
             <FlipWords words={words}/> <br />
             websites with Aceternity UI
@@ -85,18 +87,18 @@ export function App() {
         <div className="pt-16 mt-[330px]">
           <div className="flex flex-row space-x-24 min-w-screen bg-gradient-to-b from-[#ffffff] to-[#FFD0C8] shadow-lg">
             <div className="pt-24 pl-24 flex flex-col space-y-10">
-            <motion.div
-              className="text-2xl text-[#6C372E] font-serif font-bold"
-              initial={{ opacity: 0, y: 50 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{
-                delay: 0.3,
-                duration: 0.8,
-                ease: "easeInOut",
-              }}>
-              About Me
-            </motion.div>
-              <div className="font-serif text-xl text-[#6C372E] font-medium"> 
+              <motion.div
+                className="text-2xl text-[#6C372E] font-extrabold"
+                initial={{ opacity: 0, y: 50 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{
+                  delay: 0.3,
+                  duration: 0.8,
+                  ease: "easeInOut",
+                }}>
+                About Me
+              </motion.div>
+              <div className="font-bold text-xl text-[#6C372E] tracking-widest leading-wide"> 
                 Hey there! I'm a junior at the University of Houston majoring in Computer Science and minoring in Mathematics. 
                 As you step into my world on this website, you will find my projects and other passion work evolved from my very first programming class. 
                 I invite you to explore the projects I've dedicated my time and knowledge to, 
@@ -166,32 +168,32 @@ export function App() {
             <div className="flex flex-col space-y-14">
                 <div className="tracking-widest text-center text-4xl text-[#6C372E]">Let's Get In Touch!</div>
                 <div className="p-16 flex flex-col space-y-10 bg-gradient-to-tr from-[#ffcfcf] to-[#ffc4ba] shadow-xl rounded-tl-[150px] rounded-br-[150px]">
-                  <div className="text-center text-2xl text-[#6C372E] font-serif">Contact Form</div>
+                  <div className="text-center text-2xl text-[#6C372E]">Contact Form</div>
                   <div className="flex flex-col space-y-5 items-center">
                     <input
                       placeholder="Name"
                       name="name"
-                      className="bg-white w-[900px] px-8 py-3 text-[#6C372E] font-serif rounded-[60px] hover:bg-[#f9f5f5]"
+                      className="bg-white w-[900px] px-8 py-3 text-[#6C372E] rounded-[60px] hover:bg-[#f9f5f5]"
                       type="text"
                       required
                     />
                     <input
                       placeholder="Email"
                       name="email"
-                      className="bg-white w-[900px] px-8 py-3 text-[#6C372E] font-serif rounded-[60px] hover:bg-[#f9f5f5]"
+                      className="bg-white w-[900px] px-8 py-3 text-[#6C372E] rounded-[60px] hover:bg-[#f9f5f5]"
                       type="email"
                       required
                     />
                     <input
                       placeholder="Message"
                       name="message"
-                      className="bg-white w-[900px] h-[200px] px-8 py-3 text-[#6C372E] font-serif rounded-[30px] hover:bg-[#f9f5f5]"
+                      className="bg-white w-[900px] h-[200px] px-8 py-3 text-[#6C372E] rounded-[30px] hover:bg-[#f9f5f5]"
                       type="text"
                       required
                     />
                     <button
                       type="submit"
-                      className="px-12 py-3 text-[#6C372E] rounded-[60px] bg-white transform hover:-translate-y-1 duration-400 duration-200 shadow-2xl shadow-[0_0_30px_white]"
+                      className="px-12 py-3 text-[#6C372E] rounded-[60px] bg-white transform hover:-translate-y-1 duration-400 duration-200 shadow-[0_0_30px_white]"
                     >
                       Send!
                     </button>
@@ -203,7 +205,7 @@ export function App() {
         {/* Contact Form End */}
 
         {/* Socials */}
-        <div className="flex flex-col font-serif font-medium text-[#6C372E] mt-[150px]">
+        <div className="flex flex-col font-medium text-[#6C372E] mt-[150px]">
           <div className="flex pl-16 pt-4 pb-4 min-w-screen bg-gradient-to-b from-[#ffffff] to-[#FFD0C8] justify-between">
             <div className="flex items-center space-x-2">
               <FaPhone className="text-2xl text-[#6C372E]" />

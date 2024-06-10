@@ -10,6 +10,13 @@
 }
 
 @font-face {
+  font-family: 'Almeda Bold';
+  src: url('/Users/yshru/WebsiteTailwindVite/my-project/public/ameda-font/Almeda.otf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
   font-family: 'Florence Normal';
   src: url('/Users/yshru/WebsiteTailwindVite/my-project/public/florence-font/Florence.otf') format('truetype');
   font-weight: normal;
