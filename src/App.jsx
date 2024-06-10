@@ -22,7 +22,7 @@ import { FaPhone } from 'react-icons/fa';
 
 export function App() {
   {/* Any usestates or arrays here */}
-  const words = ["better", "cute", "beautiful", "modern"];
+  const words = ["Hello", "Hola", "नमस्ते", "హలో", "안녕하세요", "こんにちは" ];
 
   return (
     <>
@@ -52,22 +52,22 @@ export function App() {
               minSize={1.5}
               maxSize={3.0}
               particleDensity={100}
-              className="w-[1600px] h-[750px]"
+              className="w-[1530px] h-[750px]"
               particleColor="ffffff"I
             />
         </div>
         <div className="absolute inset-0 mt-[80px] flex flex-col items-center justify-center min-w-full">
           <div className="flex flex-col space-y-28 pt-0">
             <motion.div
-              className="tracking-wider text-[180px] text-[#6C372E] text-center"
+              className="tracking-wider text-[200px] text-[#6C372E] text-center"
               initial={{ opacity: 0, y: 50 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{
-                delay: 0.3,
+                delay: 1.0,
                 duration: 2.5,
                 ease: "easeInOut",
               }}>
-              <span className="relative right-[100px]">Hello,</span> 
+              <span className="relative right-[100px] text-shadow">Hello,</span> 
               <br />
               <span className="relative left-[100px] italic">there!</span>
             </motion.div>
@@ -75,31 +75,26 @@ export function App() {
         </div>
         {/* INTRO END */}
 
-        <div className="flex mt-[100px]">
-          <div className="text-xl text-[#6C372E] font-medium">
-            Build
-            <FlipWords words={words}/> <br />
-            websites with Aceternity UI
+
+        <div className="flex pl-24 mt-[100px]">
+          <div className="text-xl text-[#6C372E] font-bold text-bold">
+            Experienced in
+            <FlipWords words={words}/>
           </div>
         </div>
+        
 
         {/* ABOUT ME */}
-        <div className="pt-16 mt-[330px]">
-          <div className="flex flex-row space-x-24 min-w-screen bg-gradient-to-b from-[#ffffff] to-[#FFD0C8] shadow-lg">
-            <div className="pt-24 pl-24 flex flex-col space-y-10">
-              <motion.div
-                className="text-2xl text-[#6C372E] font-extrabold"
-                initial={{ opacity: 0, y: 50 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{
-                  delay: 0.3,
-                  duration: 0.8,
-                  ease: "easeInOut",
-                }}>
-                About Me
-              </motion.div>
+        <div className="flex flex-col pt-16 space-y-1 mt-[310px]">
+          <div className="flex flex-row">
+            <div className="pl-16 text-[135px] text-[#6C372E] text-left">About Me</div>
+
+          </div>
+          <div className="mt-64 flex flex-row space-x-24 min-w-screen bg-gradient-to-b from-[#ffffff] to-[#FFD0C8] shadow-lg">
+            <div className="pt-20 pl-24 flex flex-col space-y-10">
+              <div className="text-2xl text-[#6C372E] font-extrabold"> Hey There! </div>
               <div className="font-bold text-xl text-[#6C372E] tracking-widest leading-wide"> 
-                Hey there! I'm a junior at the University of Houston majoring in Computer Science and minoring in Mathematics. 
+                I'm a junior at the University of Houston majoring in Computer Science and minoring in Mathematics. 
                 As you step into my world on this website, you will find my projects and other passion work evolved from my very first programming class. 
                 I invite you to explore the projects I've dedicated my time and knowledge to, 
                 each representing a token of my growth and experience fostered through curiosity, teamwork, amazing professors, and close friends.
@@ -107,10 +102,10 @@ export function App() {
               </div> 
               {/* Buttons */}
               <div className="flex flex-row space-x-12 pt-8 justify-center">
-                <a href={ Me } target="_blank" rel="noopener noreferrer" className="bg-gradient-to-br from-[#ffc7bd] via-[#ffdad7] to-[#ffc7bd] py-6 px-20 cursor-pointer hover:bg-[#ffd2ca] transform hover:-translate-y-1 duration-400 rounded-tr-[100px] rounded-bl-[100px] duration-200 text-[#6C372E] shadow-2xl shadow-[#ffffff]">
+                <a href={ Me } target="_blank" rel="noopener noreferrer" className="text-lg bg-gradient-to-br from-[#ffc7bd] via-[#ffdad7] to-[#ffc7bd] py-6 px-20 cursor-pointer hover:bg-[#ffd2ca] transform hover:-translate-y-1 duration-400 rounded-tr-[100px] rounded-bl-[100px] duration-200 text-[#6C372E] shadow-2xl shadow-[#ffffff]">
                     More About Me
                 </a>
-                <a href={ resumeSY } target="_blank" rel="noopener noreferrer" className="bg-gradient-to-tr from-[#ffc7bd] via-[#ffdad7] to-[#ffc7bd] py-6 px-20 cursor-pointer hover:bg-[#ffd2ca] transform hover:-translate-y-1 duration-400 rounded-tl-[100px] rounded-br-[100px] duration-200 text-[#6C372E] shadow-2xl shadow-[#ffffff]">
+                <a href={ resumeSY } target="_blank" rel="noopener noreferrer" className="text-lg bg-gradient-to-tr from-[#ffc7bd] via-[#ffdad7] to-[#ffc7bd] py-6 px-20 cursor-pointer hover:bg-[#ffd2ca] transform hover:-translate-y-1 duration-400 rounded-tl-[100px] rounded-br-[100px] duration-200 text-[#6C372E] shadow-2xl shadow-[#ffffff]">
                     Download My Resume
                 </a>
               </div>
@@ -166,7 +161,7 @@ export function App() {
           <input type="hidden" name="access_key" value="23967d50-3be6-44b1-afb6-7971b65b89f8" />
           <div className="pt-16 flex justify-center">
             <div className="flex flex-col space-y-14">
-                <div className="tracking-widest text-center text-4xl text-[#6C372E]">Let's Get In Touch!</div>
+                <div className="pl-16 text-[80px] text-[#6C372E] text-center">Let's Get In Touch!</div>
                 <div className="p-16 flex flex-col space-y-10 bg-gradient-to-tr from-[#ffcfcf] to-[#ffc4ba] shadow-xl rounded-tl-[150px] rounded-br-[150px]">
                   <div className="text-center text-2xl text-[#6C372E]">Contact Form</div>
                   <div className="flex flex-col space-y-5 items-center">

@@ -5,7 +5,7 @@ import { cn } from "/Users/yshru/WebsiteTailwindVite/my-project/utils/cn4.js";
 
 export const FlipWords = ({
   words,
-  duration = 600,
+  duration = 800,
   className,
 }) => {
   const [currentWord, setCurrentWord] = useState(words[0]);
@@ -56,7 +56,7 @@ export const FlipWords = ({
           position: "absolute",
         }}
         className={cn(
-          "z-10 inline-block relative text-left text-neutral-900 dark:text-[#ffa0a0] px-2",
+          "z-10 inline-block relative text-left text-neutral-900 dark:text-[#6C372E] px-2",
           className
         )}
         key={currentWord}
