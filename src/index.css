@@ -3,14 +3,21 @@
 @tailwind utilities;
 
 @font-face {
-  font-family: 'Camellia Signature';
-  src: url('CamelliaFont/Camellia.ttf') format('truetype');
+  font-family: 'Almeda Normal';
+  src: url('/Users/yshru/WebsiteTailwindVite/my-project/public/ameda-font/Almeda.otf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Florence Normal';
+  src: url('/Users/yshru/WebsiteTailwindVite/my-project/public/florence-font/Florence.otf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
 
 body {
-  font-family: 'Camellia Signature', sans-serif;
+  font-family: 'Almeda Normal';
   margin: 0;
   padding: 0;
   width: 100vw;

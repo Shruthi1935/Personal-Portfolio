@@ -16,7 +16,7 @@ import { FloatingNav } from "/Users/yshru/WebsiteTailwindVite/my-project/compone
 import { Me } from "/Users/yshru/WebsiteTailwindVite/my-project/components/moreAboutMe.jsx";
 
 import { IconHome, IconMessage, IconUser } from "@tabler/icons-react";
-import { FaGithub, FaLinkedin, FaFigma, FaPython, FaHtml5, FaReact, FaNodeJs, FaNpm} from 'react-icons/fa';
+import { FaGithub, FaLinkedin, FaFigma, FaPython, FaHtml5, FaReact, FaNodeJs, FaNpm, FaGit} from 'react-icons/fa';
 import { SiTailwindcss, SiTypescript, SiMysql, SiVite, SiCplusplus, SiJavascript, SiNotion, SiR } from 'react-icons/si'; // still need sql icon
 import { FaPhone } from 'react-icons/fa';
 
@@ -31,15 +31,14 @@ export function App() {
       <div className="flex flex-col justify-center overflow-y-auto min-h-screen bg-gradient-to-b from-white to-[#FFD0C8]"> 
 
         {/* HEADER */}
-        <header className="sticky top-0 h-[80px] shadow-xl z-30 bg-[#ffefec] flex items-center">
+        <header className="sticky top-0 h-[80px] shadow-xl z-30 bg-[#ffece9] flex items-center">
           <div className="flex items-center justify-between w-full px-10">
             <img src={logo} alt="Logo" className="h-16" />
-            <div className="flex space-x-6 ">
-              <button className="font-serif font-bold py-3 px-5 cursor-pointer transform hover:-translate-y-1 duration-100 text-[#6C372E]">About Me</button>
-              <button className="font-serif font-bold py-3 px-5 cursor-pointer transform hover:-translate-y-1 duration-100 text-[#6C372E]">Skills</button>
-              <button className="font-serif font-bold py-3 px-5 cursor-pointer transform hover:-translate-y-1 duration-100 text-[#6C372E]">Projects</button>
-              <button className="font-serif font-bold py-3 px-5 cursor-pointer transform hover:-translate-y-1 duration-100 text-[#6C372E]">Contact</button>
-              <button className="font-serif font-bold py-3 px-5 cursor-pointer transform hover:-translate-y-1 duration-100 text-[#6C372E]">Socials</button>
+            <div className="flex space-x-5 ">
+              <button className="font-bold py-3 px-5 cursor-pointer transform hover:-translate-y-1 duration-100 text-[#6C372E]">About Me</button>
+              <button className="font-bold py-3 px-5 cursor-pointer transform hover:-translate-y-1 duration-100 text-[#6C372E]">Skills</button>
+              <button className="font-bold py-3 px-5 cursor-pointer transform hover:-translate-y-1 duration-100 text-[#6C372E]">Projects</button>
+              <button className="font-bold py-3 px-5 cursor-pointer transform hover:-translate-y-1 duration-100 text-[#6C372E] border border-[#6C372E] rounded-3xl">Contact</button>
             </div>
           </div>
         </header>
@@ -55,7 +54,7 @@ export function App() {
               maxSize={3.4}
               particleDensity={100}
               className="w-full h-full"
-              particleColor="ffffff"
+              particleColor="ffffff"I
             />
           </div>
           <div className="flex flex-col space-y-28 pt-0">
@@ -121,89 +120,42 @@ export function App() {
         {/* ABOUT ME END */}
 
         {/* Skills */}
-        <div className="pt-8 mt-[150px]">
-          <div className="flex flex-col space-y-16 pl-24">
-            <div className="font-serif text-7xl text-[#6C372E] ">Skills</div>
-
-            <div className="flex flex-row space-x-[80px]">
-              <div className="bg-gradient-to-br from-[#ffcfcf] to-[#ffc4ba] shadow-xl p-16 rounded-[50px]">
-                <div className="flex flex-col space-y-6 text-7xl">
-                  <div className="flex flex-row space-x-6">
-                    <div className="flex flex-col space-y-3 bg-white p-10 rounded-2xl transform hover:-translate-y-1 duration-100">
-                      <div className="font-serif font-light text-center text-sm text-[#ffc4ba]">Python</div>
-                      <FaPython className="text-[#ffc4ba]" />
-                    </div>
-                    <div className="flex flex-col space-y-3 bg-white p-10 rounded-2xl transform hover:-translate-y-1 duration-100">
-                      <div className="font-serif font-light text-center text-sm text-[#ffc4ba]">Python</div>
-                      <SiCplusplus className="text-[#ffc4ba]"/>
-                    </div>
-                    <div className="flex flex-col space-y-3 bg-white p-10 rounded-2xl transform hover:-translate-y-1 duration-100">
-                      <div className="font-serif font-light text-center text-sm text-[#ffc4ba]">Python</div>
-                      <FaHtml5 className="text-[#ffc4ba]" />
-                    </div>
-                    <div className="flex flex-col space-y-3 bg-white p-10 rounded-2xl transform hover:-translate-y-1 duration-100">
-                      <div className="font-serif font-light text-center text-sm text-[#ffc4ba]">Python</div>
-                      <SiTailwindcss className="text-[#ffc4ba]"/>
-                    </div>
-                    <div className="flex flex-col space-y-3 bg-white p-10 rounded-2xl transform hover:-translate-y-1 duration-100">
-                      <div className="font-serif font-light text-center text-sm text-[#ffc4ba]">Python</div>
-                      <SiJavascript className="text-[#ffc4ba]"/>
-                    </div>
+        <div className="flex pt-8 mt-[150px] items-center justify-center">
+          <motion.div
+            className="tracking-wider text-8xl text-[#6C372E] font-medium text-center"
+            initial={{ opacity: 0, y: 50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{
+              delay: 0.3,
+              duration: 2.5,
+              ease: "easeInOut",
+            }}>
+              <div className="flex p-16 bg-gradient-to-br from-[#ffcfcf] to-[#ffc4ba] shadow-xl rounded-[50px]">
+                <div className="flex flex-col space-y-12 text-white text-7xl">
+                  <div className="flex flex-row space-x-12">
+                    <FaPython className="transform hover:-translate-y-1 duration-100" />
+                    <SiCplusplus className="transform hover:-translate-y-1 duration-100"/>
+                    <FaHtml5 className="transform hover:-translate-y-1 duration-100" />
+                    <SiTailwindcss className="transform hover:-translate-y-1 duration-100"/>
+                    <SiJavascript className="transform hover:-translate-y-1 duration-100"/>
                   </div>
-
-                  <div className="flex flex-row space-x-6">
-                    <div className="flex flex-col space-y-3 bg-white p-3 rounded-2xl transform hover:-translate-y-1 duration-100">
-                      <div className="font-serif font-light text-center text-sm text-[#ffc4ba]">Python</div>
-                      <SiTypescript className="text-[#ffc4ba]" />
-                    </div>
-                    <div className="flex flex-col space-y-3 bg-white p-3 rounded-2xl transform hover:-translate-y-1 duration-100">
-                      <div className="font-serif font-light text-center text-sm text-[#ffc4ba]">Python</div>
-                      <SiR className="text-[#ffc4ba]"/>
-                    </div>
-                    <div className="flex flex-col space-y-3 bg-white p-3 rounded-2xl transform hover:-translate-y-1 duration-100">
-                      <div className="font-serif font-light text-center text-sm text-[#ffc4ba]">Python</div>
-                      <SiMysql className="text-[#ffc4ba]" />
-                    </div>
-                    <div className="flex flex-col space-y-3 bg-white p-3 rounded-2xl transform hover:-translate-y-1 duration-100">
-                      <div className="font-serif font-light text-center text-sm text-[#ffc4ba]">Python</div>
-                      <FaReact className="text-[#ffc4ba]"/>
-                    </div>
-                    <div className="flex flex-col space-y-3 bg-white p-3 rounded-2xl transform hover:-translate-y-1 duration-100">
-                      <div className="font-serif font-light text-center text-sm text-[#ffc4ba]">Python</div>
-                      <FaNodeJs className="text-[#ffc4ba]"/>
-                    </div>
+                  <div className="flex flex-row space-x-12">
+                    <SiTypescript className="transform hover:-translate-y-1 duration-100"/>
+                    <FaGit className="transform hover:-translate-y-1 duration-100"/>
+                    <SiMysql className="transform hover:-translate-y-1 duration-100"/>
+                    <FaReact className="transform hover:-translate-y-1 duration-100" />
+                    <FaNodeJs className="transform hover:-translate-y-1 duration-100" />
                   </div>
-
-                  <div className="flex flex-row space-x-6">
-                    <div className="flex flex-col space-y-3 bg-white p-3 rounded-2xl transform hover:-translate-y-1 duration-100">
-                      <div className="font-serif font-light text-center text-sm text-[#ffc4ba]">Python</div>
-                      <FaNpm className="text-[#ffc4ba]" />
-                    </div>
-                    <div className="flex flex-col space-y-3 bg-white p-3 rounded-2xl transform hover:-translate-y-1 duration-100">
-                      <div className="font-serif font-light text-center text-sm text-[#ffc4ba]">Python</div>
-                      <SiVite className="text-[#ffc4ba]"/>
-                    </div>
-                    <div className="flex flex-col space-y-3 bg-white p-3 rounded-2xl transform hover:-translate-y-1 duration-100">
-                      <div className="font-serif font-light text-center text-sm text-[#ffc4ba]">Python</div>
-                      <FaGithub className="text-[#ffc4ba]" />
-                    </div>
-                    <div className="flex flex-col space-y-3 bg-white p-3 rounded-2xl transform hover:-translate-y-1 duration-100">
-                      <div className="font-serif font-light text-center text-sm text-[#ffc4ba]">Python</div>
-                      <FaFigma className="text-[#ffc4ba]"/>
-                    </div>
-                    <div className="flex flex-col space-y-3 bg-white p-3 rounded-2xl transform hover:-translate-y-1 duration-100">
-                      <div className="font-serif font-light text-center text-sm text-[#ffc4ba]">Python</div>
-                      <SiNotion className="text-[#ffc4ba]"/>
-                    </div>
+                  <div className="flex flex-row space-x-12">
+                    <FaNpm className="transform hover:-translate-y-1 duration-100" />
+                    <SiVite className="transform hover:-translate-y-1 duration-100"/>
+                    <FaGithub className="transform hover:-translate-y-1 duration-100" />
+                    <FaFigma className="transform hover:-translate-y-1 duration-100" />
+                    <SiNotion className="transform hover:-translate-y-1 duration-100"/>
                   </div>
                 </div>
               </div>
-              <div className="flex flex-col justify-center space-y-10 pr-10 text-[#6C372E]">
-                <div className="text-3xl font-serif"> "An investment in knowledge pays the best interest." </div>
-                <div className="text-2xl "> - Benjamin Franklin </div>
-              </div>
-            </div>
-          </div>
+          </motion.div>
         </div>
         {/* Skills End */}
 

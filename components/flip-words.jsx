@@ -5,7 +5,7 @@ import { cn } from "/Users/yshru/WebsiteTailwindVite/my-project/utils/cn4.js";
 
 export const FlipWords = ({
   words,
-  duration = 3000,
+  duration = 600,
   className,
 }) => {
   const [currentWord, setCurrentWord] = useState(words[0]);
@@ -42,7 +42,7 @@ export const FlipWords = ({
         }}
         transition={{
           duration: 0.4,
-          ease: "easeInOut",
+          ease: "easeOut",
           type: "spring",
           stiffness: 100,
           damping: 10,
