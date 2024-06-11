@@ -96,10 +96,9 @@ export function App() {
 
         {/* ABOUT ME */}
         <motion.div
-          className=""
-          initial={{ opacity: 0, scale: 0.5 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 1.5, delay: 0.5 }}
+          initial={{ opacity: 0.5, scale: 0.3 }}
+          transition={{ duration: 2 }}
+          whileInView={{ opacity: 1, scale: 1 }}
         > 
           <div className="flex flex-col pt-16 space-y-1 mt-[180px]">
             <div className="flex flex-row items-center">
