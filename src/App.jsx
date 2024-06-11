@@ -1,13 +1,16 @@
 "use client";
+import './index.css';
+import './App.css';
+
 import React from "react";
-import { useState } from 'react';
 import { motion } from "framer-motion";
+import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 //import { Link } from "react-router-dom";
 
 import profile1 from '/src/assets/1.jpeg';
 import resumeSY from '/src/assets/resume.pdf';
-import logo from '/src/assets/SYLogo.svg';
+//import logo from '/src/assets/SYLogo.svg';
 
 import { SparklesCore } from '/Users/yshru/WebsiteTailwindVite/my-project/components/sparkles.jsx';
 import { FlipWords } from "/Users/yshru/WebsiteTailwindVite/my-project/components/flip-words.jsx";
@@ -37,7 +40,7 @@ export function App() {
           <header className="sticky top-0 h-[80px] shadow-xl shadow-[#fff6f6] z-30 bg-[#ffe7e3] flex items-center">
             <div className="flex flex-row w-full justify-between items-center px-10">
               {/* Left side buttons */}
-              <div className="flex flex-row items-center space-x-5 pl-[420px]">
+              <div className="flex flex-row items-center space-x-5 pl-[410px]">
                 <a href="#Projects" className="font-bold py-3 px-5 cursor-pointer transform hover:-translate-y-1 duration-100 text-[#6C372E]">
                   Projects
                 </a>

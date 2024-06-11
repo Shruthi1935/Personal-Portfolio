@@ -1,6 +1,39 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
 }
+
+@font-face {
+  font-family: 'AlmedaNormal';
+  src: url('/Users/yshru/WebsiteTailwindVite/my-project/public/almeda-font/Almeda.otf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'AlmedaBold';
+  src: url('/Users/yshru/WebsiteTailwindVite/my-project/public/almeda-font/Almeda.otf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Florence Normal';
+  src: url('/Users/yshru/WebsiteTailwindVite/my-project/public/florence-font/Florence.otf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  font-family: 'AlmedaNormal';
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #212020;
+  overflow-x: hidden;
+}
+
