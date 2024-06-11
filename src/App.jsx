@@ -83,11 +83,8 @@ export function App() {
               className="tracking-wider text-[#6C372E] text-center"
               initial={{ opacity: 0, y: 50 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{
-                delay: 1.0,
-                duration: 2.5,
-                ease: "easeInOut",
-              }}>
+              transition={{ delay: 1.0, duration: 2.5, ease: "easeInOut" }}
+            >
               <span className="relative text-[150px] right-[120px] text-shadow"> <FlipWords words={words}/></span> 
               <br />
               <span className="relative text-[90px] left-[120px] italic">nice to see you!</span>
@@ -98,36 +95,45 @@ export function App() {
         
 
         {/* ABOUT ME */}
-        <div className="flex flex-col pt-16 space-y-1 mt-[310px]">
-          <div className="flex flex-row items-center">
-            <div className="pl-16 text-[100px] text-[#6C372E]">About Me | <FlipWords words={words_2} className="items-center text-[40px]"/> </div>
-          </div>
-
-          <div className="mt-64 flex flex-row space-x-24 min-w-screen bg-gradient-to-b from-[#ffffff] to-[#FFD0C8] shadow-xl shadow-[#8d5b52]">
-            <div className="pt-20 pl-24 flex flex-col space-y-10">
-              <div className="text-2xl text-[#6C372E] font-extrabold"> Hey There! </div>
-              <p className="text-xl text-[#6C372E] tracking-widest leading-wide"> 
-                I'm a junior at the <span className="hover:bg-[#ffe0de] p-1 rounded-md"> University of Houston</span> majoring in <span className="hover:bg-[#ffe0de] p-1 rounded-md"> Computer Science</span> and minoring in <span className="hover:bg-[#ffe0de] p-1 rounded-md"> Mathematics</span>. 
-                As you step into my world on this website, you will find my projects and other passion work evolved through my curiosity. 
-                I invite you to explore the projects I've dedicated my time and knowledge to, 
-                each representing a token of my growth and experience fostered through hardwork and amazing professors.
-                Click down below to access my <span className="hover:bg-[#ffd7d4] p-1 rounded-md">resume</span> right here!
-              </p> 
-              {/* Buttons */}
-              <div className="flex flex-row space-x-12 pt-8 justify-center">
-                {/*<a href={ Me } target="_blank" rel="noopener noreferrer" className="text-lg bg-gradient-to-br from-[#ffc7bd] via-[#ffdad7] to-[#ffc7bd] py-6 px-20 cursor-pointer hover:bg-[#ffd2ca] transform hover:-translate-y-2 duration-400 rounded-tr-[100px] rounded-bl-[100px] duration-200 text-[#6C372E] shadow-2xl shadow-[#ffffff]">
-                    More About Me
-                  </a>*/}
-                <a href={ resumeSY } target="_blank" rel="noopener noreferrer" className="text-lg bg-gradient-to-tr from-[#ffc7bd] via-[#ffdad7] to-[#ffc7bd] py-6 px-20 cursor-pointer hover:bg-[#ffd2ca] transform hover:-translate-y-2 duration-400 rounded-tl-[100px] rounded-br-[100px] duration-200 text-[#6C372E] shadow-2xl shadow-[#ffffff]">
-                    Download My Resume
-                </a>
+        <motion.div
+          className=""
+          initial={{ opacity: 0, scale: 0.5 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 1.5, delay: 0.5 }}
+        > 
+          <div className="flex flex-col pt-16 space-y-1 mt-[180px]">
+            <div className="flex flex-row items-center">
+              {/* <div className="pl-16 text-[100px] text-[#6C372E]">About Me | <FlipWords words={words_2} className="items-center text-[40px]"/> </div> */}
+              <div className="pl-16 text-[100px] text-[#6C372E]">About Me </div>
               </div>
-              {/* Buttons End*/}
+
+            <div className="mt-64 flex flex-row space-x-24 min-w-screen bg-gradient-to-b from-[#ffffff] to-[#FFD0C8]">
+              <div className="pt-20 pl-24 flex flex-col space-y-10">
+                <div className="text-2xl text-[#6C372E] font-extrabold"> Hey There! </div>
+                <p className="text-xl text-[#6C372E] tracking-widest leading-wide"> 
+                  I'm a junior at the <span className="hover:bg-[#ffe0de] p-1 rounded-md"> University of Houston</span> majoring in <span className="hover:bg-[#ffe0de] p-1 rounded-md"> Computer Science</span> and minoring in <span className="hover:bg-[#ffe0de] p-1 rounded-md"> Mathematics</span>. 
+                  As you step into my world on this website, you will find my projects and other passion work evolved through my curiosity. 
+                  I invite you to explore the projects I've dedicated my time and knowledge to, 
+                  each representing a token of my growth and experience fostered through hardwork and amazing professors.
+                  Click down below to access my <span className="hover:bg-[#ffd7d4] p-1 rounded-md">resume</span> right here!
+                </p> 
+                {/* Buttons */}
+                <div className="flex flex-row space-x-12 pt-8 justify-center">
+                  {/*<a href={ Me } target="_blank" rel="noopener noreferrer" className="text-lg bg-gradient-to-br from-[#ffc7bd] via-[#ffdad7] to-[#ffc7bd] py-6 px-20 cursor-pointer hover:bg-[#ffd2ca] transform hover:-translate-y-2 duration-400 rounded-tr-[100px] rounded-bl-[100px] duration-200 text-[#6C372E] shadow-2xl shadow-[#ffffff]">
+                      More About Me
+                    </a>*/}
+                  <a href={ resumeSY } target="_blank" rel="noopener noreferrer" className="text-lg bg-gradient-to-tr from-[#ffc7bd] via-[#ffdad7] to-[#ffc7bd] py-6 px-20 cursor-pointer hover:bg-[#ffd2ca] transform hover:-translate-y-2 duration-400 rounded-tl-[100px] rounded-br-[100px] duration-200 text-[#6C372E] shadow-2xl shadow-[#ffffff]">
+                      Download My Resume
+                  </a>
+                </div>
+                {/* Buttons End*/}
+              </div>
+              <img src={ profile1 } alt="Profile Image 1" className="flex w-[700px] h-[580px]"/>
             </div>
-            <img src={ profile1 } alt="Profile Image 1" className="flex w-[700px] h-[580px]"/>
           </div>
-        </div>
+        </motion.div>
         {/* ABOUT ME END */}
+
 
         {/* Skills */}
         <div className="flex pt-8 mt-[150px] items-center justify-center">
@@ -138,7 +144,6 @@ export function App() {
             transition={{
               delay: 0.3,
               duration: 2.5,
-              ease: "easeInOut",
             }}>
               <div className="flex p-16 bg-gradient-to-br from-[#ffcfcf] to-[#ffc4ba] shadow-xl rounded-[50px]">
                 <div className="flex flex-col space-y-12 text-white text-7xl">
