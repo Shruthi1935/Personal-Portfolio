@@ -35,22 +35,22 @@ export function App() {
         <header className="sticky top-0 h-[80px] shadow-xl shadow-[#fff6f6] z-30 bg-[#ffe7e3] flex items-center">
           <div className="flex flex-row w-full justify-between items-center px-10">
             {/* Left side buttons */}
-            <div className="flex flex-row items-center space-x-5 pl-[420px]">
+            <div className="flex flex-row items-center space-x-5 pl-[390px]">
               <button className="font-bold py-3 px-5 cursor-pointer transform hover:-translate-y-1 duration-100 text-[#6C372E]">
-                About Me
+                Projects
               </button>
               <button className="font-bold py-3 px-5 cursor-pointer transform hover:-translate-y-1 duration-100 text-[#6C372E]">
                 Skills
               </button>
             </div>
             {/* Website Name */}
-            <div className=" text-xl py-3 px-5 text-[#6C372E] text-center">
+            <div className=" text-xl py-3 px-12 text-[#6C372E] text-center">
               SHRUTHI <br /> YENAMAGANDLA
             </div>
             {/* Right side buttons */}
             <div className="flex flex-row items-center space-x-5">
               <button className="font-bold py-3 px-5 cursor-pointer transform hover:-translate-y-1 duration-100 text-[#6C372E]">
-                Projects
+                About Me
               </button>
               <button className="font-bold py-3 px-5 cursor-pointer transform hover:-translate-y-1 duration-100 text-[#6C372E]">
                 Socials
@@ -99,19 +99,19 @@ export function App() {
 
         {/* ABOUT ME */}
         <div className="flex flex-col pt-16 space-y-1 mt-[310px]">
-          <div className="flex flex-row space-x-11">
-            <div className="pl-16 text-[115px] text-[#6C372E] text-left">About Me</div>
-            <div className="text-xl"> <FlipWords words={words_2}/></div>
+          <div className="flex flex-row items-center">
+            <div className="pl-16 text-[100px] text-[#6C372E]">About Me | <FlipWords words={words_2} className="items-center text-[40px]"/> </div>
           </div>
-          <div className="mt-64 flex flex-row space-x-24 min-w-screen bg-gradient-to-b from-[#ffffff] to-[#FFD0C8] shadow-lg">
+
+          <div className="mt-64 flex flex-row space-x-24 min-w-screen bg-gradient-to-b from-[#ffffff] to-[#FFD0C8] shadow-xl shadow-[#8d5b52]">
             <div className="pt-20 pl-24 flex flex-col space-y-10">
               <div className="text-2xl text-[#6C372E] font-extrabold"> Hey There! </div>
               <p className="text-xl text-[#6C372E] tracking-widest leading-wide"> 
-                I'm a junior at the University of Houston majoring in Computer Science and minoring in Mathematics. 
+                I'm a junior at the <span className="hover:bg-[#ffe0de] p-1 rounded-md"> University of Houston</span> majoring in <span className="hover:bg-[#ffe0de] p-1 rounded-md"> Computer Science</span> and minoring in <span className="hover:bg-[#ffe0de] p-1 rounded-md"> Mathematics</span>. 
                 As you step into my world on this website, you will find my projects and other passion work evolved through my curiosity. 
                 I invite you to explore the projects I've dedicated my time and knowledge to, 
                 each representing a token of my growth and experience fostered through hardwork and amazing professors.
-                Click down below to access my resume right here!
+                Click down below to access my <span className="hover:bg-[#ffd7d4] p-1 rounded-md">resume</span> right here!
               </p> 
               {/* Buttons */}
               <div className="flex flex-row space-x-12 pt-8 justify-center">
@@ -121,7 +121,6 @@ export function App() {
                 <a href={ resumeSY } target="_blank" rel="noopener noreferrer" className="text-lg bg-gradient-to-tr from-[#ffc7bd] via-[#ffdad7] to-[#ffc7bd] py-6 px-20 cursor-pointer hover:bg-[#ffd2ca] transform hover:-translate-y-2 duration-400 rounded-tl-[100px] rounded-br-[100px] duration-200 text-[#6C372E] shadow-2xl shadow-[#ffffff]">
                     Download My Resume
                 </a>
-                
               </div>
               {/* Buttons End*/}
             </div>
