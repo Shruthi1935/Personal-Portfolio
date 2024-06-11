@@ -3,15 +3,15 @@
 @tailwind utilities;
 
 @font-face {
-  font-family: 'Almeda Normal';
-  src: url('/Users/yshru/WebsiteTailwindVite/my-project/public/ameda-font/Almeda.otf') format('truetype');
+  font-family: 'AlmedaNormal';
+  src: url('/Users/yshru/WebsiteTailwindVite/my-project/public/almeda-font/Almeda.otf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'Almeda Bold';
-  src: url('/Users/yshru/WebsiteTailwindVite/my-project/public/ameda-font/Almeda.otf') format('truetype');
+  font-family: 'AlmedaBold';
+  src: url('/Users/yshru/WebsiteTailwindVite/my-project/public/almeda-font/Almeda.otf') format('truetype');
   font-weight: bold;
   font-style: normal;
 }
@@ -24,7 +24,7 @@
 }
 
 body {
-  font-family: 'Almeda Normal';
+  font-family: 'AlmedaNormal';
   margin: 0;
   padding: 0;
   width: 100vw;

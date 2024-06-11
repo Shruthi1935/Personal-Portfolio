@@ -466,3 +466,22 @@ body {
   overflow-x: hidden;
 }
 */}
+
+
+{/* HEADER */}
+<header className="sticky top-0 h-[70px] shadow-xl z-30 bg-[#ffece9] flex items-center">
+<div className="flex items-center justify-between w-full px-10">
+  <img src={logo} alt="Logo" className="h-12" />
+  <div className="flex space-x-5 ">
+    <button className="font-bold py-3 px-5 text-[#6C372E] text-center"> Shruthi <br/> Yenamagandla </button>
+
+
+
+    <button className="font-bold py-3 px-5 cursor-pointer transform hover:-translate-y-1 duration-100 text-[#6C372E]">About Me</button>
+    <button className="font-bold py-3 px-5 cursor-pointer transform hover:-translate-y-1 duration-100 text-[#6C372E]">Skills</button>
+    <button className="font-bold py-3 px-5 cursor-pointer transform hover:-translate-y-1 duration-100 text-[#6C372E]">Projects</button>
+    <button className="font-bold py-1 px-5 cursor-pointer transform hover:-translate-y-1 duration-100 text-[#6C372E] border border-[#6C372E] rounded-3xl">Contact</button>
+  </div>
+</div>
+</header>
+{/* HEADER END */}

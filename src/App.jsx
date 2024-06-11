@@ -22,7 +22,8 @@ import { FaPhone } from 'react-icons/fa';
 
 export function App() {
   {/* Any usestates or arrays here */}
-  const words = ["Hello", "Hola", "नमस्ते", "హలో", "안녕하세요", "こんにちは" ];
+  const words = ["Hello,", "Hola,", "नमस्ते,", "안녕하세요,", "హలో,", "こんにちは," ];
+  const words_2 = ["University of Houston", "Computer Science", "Mathematics"];
 
   return (
     <>
@@ -31,18 +32,38 @@ export function App() {
       <div className="flex flex-col justify-center overflow-y-auto min-h-screen bg-gradient-to-b from-[#ffd2ca] via-[#ffdcd6] to-[#fff1f1]"> 
 
         {/* HEADER */}
-        <header className="sticky top-0 h-[70px] shadow-xl z-30 bg-[#ffece9] flex items-center">
-          <div className="flex items-center justify-between w-full px-10">
-            <img src={logo} alt="Logo" className="h-12" />
-            <div className="flex space-x-5 ">
-              <button className="font-bold py-3 px-5 cursor-pointer transform hover:-translate-y-1 duration-100 text-[#6C372E]">About Me</button>
-              <button className="font-bold py-3 px-5 cursor-pointer transform hover:-translate-y-1 duration-100 text-[#6C372E]">Skills</button>
-              <button className="font-bold py-3 px-5 cursor-pointer transform hover:-translate-y-1 duration-100 text-[#6C372E]">Projects</button>
-              <button className="font-bold py-1 px-5 cursor-pointer transform hover:-translate-y-1 duration-100 text-[#6C372E] border border-[#6C372E] rounded-3xl">Contact</button>
+        <header className="sticky top-0 h-[80px] shadow-xl shadow-[#fff6f6] z-30 bg-[#ffe7e3] flex items-center">
+          <div className="flex flex-row w-full justify-between items-center px-10">
+            {/* Left side buttons */}
+            <div className="flex flex-row items-center space-x-5 pl-[420px]">
+              <button className="font-bold py-3 px-5 cursor-pointer transform hover:-translate-y-1 duration-100 text-[#6C372E]">
+                About Me
+              </button>
+              <button className="font-bold py-3 px-5 cursor-pointer transform hover:-translate-y-1 duration-100 text-[#6C372E]">
+                Skills
+              </button>
             </div>
+            {/* Website Name */}
+            <div className=" text-xl py-3 px-5 text-[#6C372E] text-center">
+              SHRUTHI <br /> YENAMAGANDLA
+            </div>
+            {/* Right side buttons */}
+            <div className="flex flex-row items-center space-x-5">
+              <button className="font-bold py-3 px-5 cursor-pointer transform hover:-translate-y-1 duration-100 text-[#6C372E]">
+                Projects
+              </button>
+              <button className="font-bold py-3 px-5 cursor-pointer transform hover:-translate-y-1 duration-100 text-[#6C372E]">
+                Socials
+              </button>
+            </div>
+            {/* Contact button */}
+            <button className="font-bold py-1 px-5 cursor-pointer transform hover:-translate-y-1 duration-100 text-[#6C372E] border border-[#6C372E] rounded-3xl ml-auto">
+              Contact
+            </button>
           </div>
         </header>
         {/* HEADER END */}
+
         
         {/* INTRO */}
         <div className="relative">
@@ -53,13 +74,13 @@ export function App() {
               maxSize={3.0}
               particleDensity={100}
               className="w-[1530px] h-[750px]"
-              particleColor="ffffff"I
+              particleColor="ffffff"
             />
         </div>
         <div className="absolute inset-0 mt-[80px] flex flex-col items-center justify-center min-w-full">
           <div className="flex flex-col space-y-28 pt-0">
             <motion.div
-              className="tracking-wider text-[200px] text-[#6C372E] text-center"
+              className="tracking-wider text-[#6C372E] text-center"
               initial={{ opacity: 0, y: 50 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{
@@ -67,47 +88,40 @@ export function App() {
                 duration: 2.5,
                 ease: "easeInOut",
               }}>
-              <span className="relative right-[100px] text-shadow">Hello,</span> 
+              <span className="relative text-[150px] right-[120px] text-shadow"> <FlipWords words={words}/></span> 
               <br />
-              <span className="relative left-[100px] italic">there!</span>
+              <span className="relative text-[90px] left-[120px] italic">nice to see you!</span>
             </motion.div>
           </div>
         </div>
         {/* INTRO END */}
-
-
-        <div className="flex pl-24 mt-[100px]">
-          <div className="text-xl text-[#6C372E] font-bold text-bold">
-            Experienced in
-            <FlipWords words={words}/>
-          </div>
-        </div>
         
 
         {/* ABOUT ME */}
         <div className="flex flex-col pt-16 space-y-1 mt-[310px]">
-          <div className="flex flex-row">
-            <div className="pl-16 text-[135px] text-[#6C372E] text-left">About Me</div>
-
+          <div className="flex flex-row space-x-11">
+            <div className="pl-16 text-[115px] text-[#6C372E] text-left">About Me</div>
+            <div className="text-xl"> <FlipWords words={words_2}/></div>
           </div>
           <div className="mt-64 flex flex-row space-x-24 min-w-screen bg-gradient-to-b from-[#ffffff] to-[#FFD0C8] shadow-lg">
             <div className="pt-20 pl-24 flex flex-col space-y-10">
               <div className="text-2xl text-[#6C372E] font-extrabold"> Hey There! </div>
-              <div className="font-bold text-xl text-[#6C372E] tracking-widest leading-wide"> 
+              <p className="text-xl text-[#6C372E] tracking-widest leading-wide"> 
                 I'm a junior at the University of Houston majoring in Computer Science and minoring in Mathematics. 
-                As you step into my world on this website, you will find my projects and other passion work evolved from my very first programming class. 
+                As you step into my world on this website, you will find my projects and other passion work evolved through my curiosity. 
                 I invite you to explore the projects I've dedicated my time and knowledge to, 
-                each representing a token of my growth and experience fostered through curiosity, teamwork, amazing professors, and close friends.
-                Click down below if you'd like to learn more about me, or you can access my resume right here!
-              </div> 
+                each representing a token of my growth and experience fostered through hardwork and amazing professors.
+                Click down below to access my resume right here!
+              </p> 
               {/* Buttons */}
               <div className="flex flex-row space-x-12 pt-8 justify-center">
-                <a href={ Me } target="_blank" rel="noopener noreferrer" className="text-lg bg-gradient-to-br from-[#ffc7bd] via-[#ffdad7] to-[#ffc7bd] py-6 px-20 cursor-pointer hover:bg-[#ffd2ca] transform hover:-translate-y-1 duration-400 rounded-tr-[100px] rounded-bl-[100px] duration-200 text-[#6C372E] shadow-2xl shadow-[#ffffff]">
+                {/*<a href={ Me } target="_blank" rel="noopener noreferrer" className="text-lg bg-gradient-to-br from-[#ffc7bd] via-[#ffdad7] to-[#ffc7bd] py-6 px-20 cursor-pointer hover:bg-[#ffd2ca] transform hover:-translate-y-2 duration-400 rounded-tr-[100px] rounded-bl-[100px] duration-200 text-[#6C372E] shadow-2xl shadow-[#ffffff]">
                     More About Me
-                </a>
-                <a href={ resumeSY } target="_blank" rel="noopener noreferrer" className="text-lg bg-gradient-to-tr from-[#ffc7bd] via-[#ffdad7] to-[#ffc7bd] py-6 px-20 cursor-pointer hover:bg-[#ffd2ca] transform hover:-translate-y-1 duration-400 rounded-tl-[100px] rounded-br-[100px] duration-200 text-[#6C372E] shadow-2xl shadow-[#ffffff]">
+                  </a>*/}
+                <a href={ resumeSY } target="_blank" rel="noopener noreferrer" className="text-lg bg-gradient-to-tr from-[#ffc7bd] via-[#ffdad7] to-[#ffc7bd] py-6 px-20 cursor-pointer hover:bg-[#ffd2ca] transform hover:-translate-y-2 duration-400 rounded-tl-[100px] rounded-br-[100px] duration-200 text-[#6C372E] shadow-2xl shadow-[#ffffff]">
                     Download My Resume
                 </a>
+                
               </div>
               {/* Buttons End*/}
             </div>

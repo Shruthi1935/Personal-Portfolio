@@ -5,7 +5,7 @@ import { cn } from "/Users/yshru/WebsiteTailwindVite/my-project/utils/cn4.js";
 
 export const FlipWords = ({
   words,
-  duration = 800,
+  duration = 1000,
   className,
 }) => {
   const [currentWord, setCurrentWord] = useState(words[0]);
@@ -41,17 +41,17 @@ export const FlipWords = ({
           y: 0,
         }}
         transition={{
-          duration: 0.4,
+          duration: 1.4,
           ease: "easeOut",
           type: "spring",
           stiffness: 100,
-          damping: 10,
+          damping: 50,
         }}
         exit={{
           opacity: 0,
           y: -40,
           x: 40,
-          filter: "blur(8px)",
+          filter: "blur(20px)",
           scale: 2,
           position: "absolute",
         }}
@@ -68,7 +68,7 @@ export const FlipWords = ({
             animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
             transition={{
               delay: index * 0.08,
-              duration: 0.4,
+              duration: 1.0,
             }}
             className="inline-block"
           >
