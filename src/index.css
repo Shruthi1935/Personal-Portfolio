@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+  scroll-behavior: smooth;
+}
+
 @font-face {
   font-family: 'AlmedaNormal';
   src: url('/Users/yshru/WebsiteTailwindVite/my-project/public/almeda-font/Almeda.otf') format('truetype');
