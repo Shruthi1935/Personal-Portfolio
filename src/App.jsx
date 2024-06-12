@@ -82,28 +82,28 @@ export function App() {
             <div className="flex flex-row w-full justify-between items-center px-10">
               {/* Left side buttons */}
               <div className="flex flex-row items-center space-x-5 pl-[410px]">
-                <a href="#Projects" className="py-3 px-5 cursor-pointer transform hover:-translate-y-1 duration-100 text-[#6C372E]">
+                <a href="#Projects" className="py-3 px-5 cursor-pointer transform hover:-translate-y-1 duration-100 text-black">
                   Projects
                 </a>
-                <a href="#Skills" className="py-3 px-5 cursor-pointer transform hover:-translate-y-1 duration-100 text-[#6C372E]">
+                <a href="#Skills" className="py-3 px-5 cursor-pointer transform hover:-translate-y-1 duration-100 text-black">
                   Skills
                 </a>
               </div>
               {/* Website Name */}
-              <a href="#Hero" className=" text-xl py-3 px-12 text-[#6C372E] text-center">
+              <a href="#Hero" className="font-extrabold text-xl py-3 px-12 text-black text-center">
                 SHRUTHI <br /> YENAMAGANDLA
               </a>
               {/* Right side buttons */}
               <div className="flex flex-row items-center space-x-5">
-                <a href="#About" className="py-3 px-5 cursor-pointer transform hover:-translate-y-1 duration-100 text-[#6C372E]">
+                <a href="#About" className="py-3 px-5 cursor-pointer transform hover:-translate-y-1 duration-100 text-black">
                   About
                 </a>
-                <a href="#Socials" className="py-3 px-5 cursor-pointer transform hover:-translate-y-1 duration-100 text-[#6C372E]">
+                <a href="#Socials" className="py-3 px-5 cursor-pointer transform hover:-translate-y-1 duration-100 text-black">
                   Socials
                 </a>
               </div>
               {/* Contact button */}
-              <a href="#Contact" className="py-2 px-5 cursor-pointer transform hover:-translate-y-1 duration-100 text-[#6C372E] border border-[#6C372E] rounded-3xl ml-auto">
+              <a href="#Contact" className="font-extrabold py-2 px-5 cursor-pointer transform hover:-translate-y-1 duration-100 text-black border border-black rounded-3xl ml-auto">
                 Contact
               </a>
             </div>
@@ -180,19 +180,20 @@ export function App() {
         {/* ABOUT END */}
 
         <section id="ProjectsIntro">
-        <motion.div
+          <motion.div
             initial={{ opacity: 0.5, scale: 0.3 }}
             transition={{ duration: 2 }}
             whileInView={{ opacity: 1, scale: 1 }}
           >
-            <div className="relative mt-[100px] bg-[url('/Users/yshru/WebsiteTailwindVite/my-project/src/assets/stripesbg.png')] bg-cover bg-center h-screen">
-              <div className="flex flex-col">
-                <div className="absolute left-11 text-[80px] text-[#6C372E] tracking-wide"> I'm <br/> Shruthi <br/> Yenamagandla </div>
-                <div className="absolute text-[30px] text-[#6C372E]"> Scroll down to see my work! </div>
-              </div>
-            </div>
+            <div className="relative mt-[100px] bg-[url('/Users/yshru/WebsiteTailwindVite/my-project/src/assets/stripesbg.png')] bg-cover bg-center h-screen flex flex-col items-start justify-center space-y-1">
+              <span className="font-medium text-black text-[95px] text-shadow ml-[30%]">I'm</span>
+              <span className="font-medium text-black text-[95px] text-shadow ml-[35%]">Shruthi</span>
+              <span className="font-medium text-black text-[95px] text-shadow ml-[43%]">Yenamagandla</span>
+              <span className="text-black text-[30px] text-shadow italic ml-[44%]">Scroll down to view my work!</span>
+            </div> 
           </motion.div>
         </section>
+
 
         <section id="Projects"> 
           <div className="mt-[100px] flex flex-col">
