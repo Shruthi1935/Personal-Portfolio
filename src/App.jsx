@@ -21,7 +21,12 @@ import { FlipWords } from "/Users/yshru/WebsiteTailwindVite/my-project/component
 import { FaGithub, FaLinkedin, FaFigma, FaPython, FaHtml5, FaReact, FaNodeJs, FaNpm, FaGit} from 'react-icons/fa';
 import { SiTailwindcss, SiTypescript, SiMysql, SiVite, SiCplusplus, SiJavascript, SiNotion, SiR } from 'react-icons/si';
 import { FaPhone } from 'react-icons/fa';
+import { IconHome, IconMessage, IconUser } from "@tabler/icons-react";
 // still need sql icon
+
+import { cn } from "/Users/yshru/WebsiteTailwindVite/my-project/utils/cn5.js";
+import { BentoGrid, BentoGridItem } from "/Users/yshru/WebsiteTailwindVite/my-project/components/bento-grid.jsx";
+import { IconClipboardCopy, IconFileBroken, IconSignature, IconTableColumn} from "@tabler/icons-react";
 
 
 
@@ -29,6 +34,42 @@ export function App() {
   {/* Any usestates or arrays here */}
   const words = ["Hello,", "Hola,", "नमस्ते,", "안녕하세요,", "హలో,", "こんにちは," ];
   const words_2 = ["University of Houston", "Computer Science", "Mathematics"];
+
+  const Skeleton = () => (
+    <div className="flex w-full h-full rounded-xl border border-transparent bg-neutral-100"></div>
+  );
+  const items = [
+    {
+      title: "The Dawn of Innovation",
+      description: "Explore the birth of groundbreaking ideas and inventions.",
+      header: <Skeleton />,
+      className: "md:col-span-2 h-[450px] w-[560px]",
+      icon: <IconClipboardCopy className="h-4 w-4 text-neutral-500" />,
+    },
+    {
+      title: "The Digital Revolution",
+      description: "Dive into the transformative power of technology.",
+      header: <Skeleton />,
+      className: "md:col-span-1 h-[450px] w-[450px]",
+      icon: <IconFileBroken className="h-4 w-4 text-neutral-500" />,
+    },
+    {
+      title: "The Art of Design",
+      description: "Discover the beauty of thoughtful and functional design.",
+      header: <Skeleton />,
+      className: "md:col-span-1",
+      icon: <IconSignature className="h-4 w-4 text-neutral-500" />,
+    },
+    {
+      title: "The Power of Communication",
+      description:
+        "Understand the impact of effective communication in our lives.",
+      header: <Skeleton />,
+      className: "md:col-span-2",
+      icon: <IconTableColumn className="h-4 w-4 text-neutral-500" />,
+    },
+  ];
+
   return (
     <>
       {/* Work here */}
@@ -41,10 +82,10 @@ export function App() {
             <div className="flex flex-row w-full justify-between items-center px-10">
               {/* Left side buttons */}
               <div className="flex flex-row items-center space-x-5 pl-[410px]">
-                <a href="#Projects" className="font-bold py-3 px-5 cursor-pointer transform hover:-translate-y-1 duration-100 text-[#6C372E]">
+                <a href="#Projects" className="py-3 px-5 cursor-pointer transform hover:-translate-y-1 duration-100 text-[#6C372E]">
                   Projects
                 </a>
-                <a href="#Skills" className="font-bold py-3 px-5 cursor-pointer transform hover:-translate-y-1 duration-100 text-[#6C372E]">
+                <a href="#Skills" className="py-3 px-5 cursor-pointer transform hover:-translate-y-1 duration-100 text-[#6C372E]">
                   Skills
                 </a>
               </div>
@@ -54,15 +95,15 @@ export function App() {
               </a>
               {/* Right side buttons */}
               <div className="flex flex-row items-center space-x-5">
-                <a href="#About" className="font-bold py-3 px-5 cursor-pointer transform hover:-translate-y-1 duration-100 text-[#6C372E]">
+                <a href="#About" className="py-3 px-5 cursor-pointer transform hover:-translate-y-1 duration-100 text-[#6C372E]">
                   About
                 </a>
-                <a href="#Socials" className="font-bold py-3 px-5 cursor-pointer transform hover:-translate-y-1 duration-100 text-[#6C372E]">
+                <a href="#Socials" className="py-3 px-5 cursor-pointer transform hover:-translate-y-1 duration-100 text-[#6C372E]">
                   Socials
                 </a>
               </div>
               {/* Contact button */}
-              <a href="#Contact" className="font-bold py-1 px-5 cursor-pointer transform hover:-translate-y-1 duration-100 text-[#6C372E] border border-[#6C372E] rounded-3xl ml-auto">
+              <a href="#Contact" className="py-2 px-5 cursor-pointer transform hover:-translate-y-1 duration-100 text-[#6C372E] border border-[#6C372E] rounded-3xl ml-auto">
                 Contact
               </a>
             </div>
@@ -80,7 +121,7 @@ export function App() {
                 minSize={1.5}
                 maxSize={3.0}
                 particleDensity={100}
-                className="w-[1530px] h-[750px]"
+                className="w-[1510px] h-[750px]"
                 particleColor="ffffff"
               />
           </div>
@@ -103,15 +144,14 @@ export function App() {
         
 
         {/* ABOUT ME */}
-        <section id="About">
+        {/* <section id="About">
           <motion.div
             initial={{ opacity: 0.5, scale: 0.3 }}
             transition={{ duration: 2 }}
             whileInView={{ opacity: 1, scale: 1 }}
           > 
-            <div className="flex flex-col pt-16 space-y-1 mt-[135px]">
+            <div className="absolute flex flex-col pt-16 space-y-1 mt-[135px]">
               <div className="flex flex-row items-center">
-                {/* <div className="pl-16 text-[100px] text-[#6C372E]">About Me | <FlipWords words={words_2} className="items-center text-[40px]"/> </div> */}
                 <div className="pl-16 text-[100px] text-[#6C372E]">About Me </div>
                 </div>
 
@@ -121,20 +161,16 @@ export function App() {
                   <p className="text-xl text-[#6C372E] tracking-widest leading-wide"> 
                     I'm a junior at the <span className="hover:bg-[#ffe0de] p-1 rounded-md"> University of Houston</span> majoring in <span className="hover:bg-[#ffe0de] p-1 rounded-md"> Computer Science</span> and minoring in <span className="hover:bg-[#ffe0de] p-1 rounded-md"> Mathematics</span>. 
                     As you step into my world on this website, you will find my projects and other passion work evolved through my curiosity. 
+                    <br/>
                     I invite you to explore the projects I've dedicated my time and knowledge to, 
                     each representing a token of my growth and experience fostered through hardwork and amazing professors.
                     Click down below to access my <span className="hover:bg-[#ffd7d4] p-1 rounded-md">resume</span> right here!
                   </p> 
-                  {/* Buttons */}
                   <div className="flex flex-row space-x-12 pt-8 justify-center">
-                    {/*<a href={ Me } target="_blank" rel="noopener noreferrer" className="text-lg bg-gradient-to-br from-[#ffc7bd] via-[#ffdad7] to-[#ffc7bd] py-6 px-20 cursor-pointer hover:bg-[#ffd2ca] transform hover:-translate-y-2 duration-400 rounded-tr-[100px] rounded-bl-[100px] duration-200 text-[#6C372E] shadow-2xl shadow-[#ffffff]">
-                        More About Me
-                      </a>*/}
                     <a href={ resumeSY } target="_blank" rel="noopener noreferrer" className="text-lg bg-gradient-to-tr from-[#ffc7bd] via-[#ffdad7] to-[#ffc7bd] py-6 px-20 cursor-pointer hover:bg-[#ffd2ca] transform hover:-translate-y-2 duration-400 rounded-tl-[100px] rounded-br-[100px] duration-200 text-[#6C372E] shadow-2xl shadow-[#ffffff]">
                         Download My Resume
                     </a>
                   </div>
-                  {/* Buttons End*/}
                 </div>
                 <img src={ profile1 } alt="Profile Image 1" className="flex w-[700px] h-[580px]"/>
               </div>
@@ -143,6 +179,45 @@ export function App() {
         </section>
         {/* ABOUT END */}
 
+        <section id="ProjectsIntro">
+        <motion.div
+            initial={{ opacity: 0.5, scale: 0.3 }}
+            transition={{ duration: 2 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+          >
+            <div className="relative mt-[100px] bg-[url('/Users/yshru/WebsiteTailwindVite/my-project/src/assets/stripesbg.png')] bg-cover bg-center h-screen">
+              <div className="flex flex-col">
+                <div className="absolute left-11 text-[80px] text-[#6C372E] tracking-wide"> I'm <br/> Shruthi <br/> Yenamagandla </div>
+                <div className="absolute text-[30px] text-[#6C372E]"> Scroll down to see my work! </div>
+              </div>
+            </div>
+          </motion.div>
+        </section>
+
+        <section id="Projects"> 
+          <div className="mt-[100px] flex flex-col">
+            <motion.div
+              initial={{ opacity: 0.5, scale: 0.3 }}
+              transition={{ duration: 2 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              > 
+              <div className="pl-16 text-[100px] text-[#6C372E] text-center"> Projects </div>
+            </motion.div>
+            
+            <BentoGrid className="max-w-4xl mx-auto md:auto-rows-[20rem]">
+              {items.map((item, i) => (
+                <BentoGridItem
+                  key={i}
+                  title={item.title}
+                  description={item.description}
+                  header={item.header}
+                  className={item.className}
+                  icon={item.icon}
+                />
+              ))}
+            </BentoGrid>
+          </div>
+        </section>
 
         {/* SKILLS */}
         <section id="Skills">
