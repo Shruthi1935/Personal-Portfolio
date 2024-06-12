@@ -485,3 +485,9 @@ body {
 </div>
 </header>
 {/* HEADER END */}
+
+{/*
+<span className="font-medium text-black text-[95px] text-shadow ml-[13%]">Shruthi</span>
+<span className="font-medium text-black text-[95px] text-shadow ml-[20%]">Yenamagandla</span>
+<span className="text-black text-[30px] text-shadow italic ml-[27%]">Scroll down to view my work!</span>
+*/}

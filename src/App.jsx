@@ -3,7 +3,7 @@ import './index.css';
 import './App.css';
 
 import React from "react";
-import { motion } from "framer-motion";
+import { delay, motion } from "framer-motion";
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 //import { Link } from "react-router-dom";
@@ -141,62 +141,96 @@ export function App() {
           </div>
         </section>
         {/* HERO END */}
-        
 
-        {/* ABOUT ME */}
-        {/* <section id="About">
-          <motion.div
-            initial={{ opacity: 0.5, scale: 0.3 }}
-            transition={{ duration: 2 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-          > 
-            <div className="absolute flex flex-col pt-16 space-y-1 mt-[135px]">
-              <div className="flex flex-row items-center">
-                <div className="pl-16 text-[100px] text-[#6C372E]">About Me </div>
-                </div>
+        <section id="About">
+          <div className="relative mt-[100px]">
+            <motion.div
+              initial={{ opacity: 0, scale: 0.3 }}
+              transition={{ duration: 1.6 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+            >
+              <div className="absolute inset-0 bg-[url('/Users/yshru/WebsiteTailwindVite/my-project/src/assets/stripesbg.png')] bg-cover bg-center h-screen"></div>
+            </motion.div>
 
-              <div className="mt-64 flex flex-row space-x-24 min-w-screen bg-gradient-to-b from-[#ffffff] to-[#FFD0C8]">
-                <div className="pt-20 pl-24 flex flex-col space-y-10">
-                  <div className="text-2xl text-[#6C372E] font-extrabold"> Hey There! </div>
-                  <p className="text-xl text-[#6C372E] tracking-widest leading-wide"> 
-                    I'm a junior at the <span className="hover:bg-[#ffe0de] p-1 rounded-md"> University of Houston</span> majoring in <span className="hover:bg-[#ffe0de] p-1 rounded-md"> Computer Science</span> and minoring in <span className="hover:bg-[#ffe0de] p-1 rounded-md"> Mathematics</span>. 
-                    As you step into my world on this website, you will find my projects and other passion work evolved through my curiosity. 
-                    <br/>
-                    I invite you to explore the projects I've dedicated my time and knowledge to, 
-                    each representing a token of my growth and experience fostered through hardwork and amazing professors.
-                    Click down below to access my <span className="hover:bg-[#ffd7d4] p-1 rounded-md">resume</span> right here!
-                  </p> 
-                  <div className="flex flex-row space-x-12 pt-8 justify-center">
-                    <a href={ resumeSY } target="_blank" rel="noopener noreferrer" className="text-lg bg-gradient-to-tr from-[#ffc7bd] via-[#ffdad7] to-[#ffc7bd] py-6 px-20 cursor-pointer hover:bg-[#ffd2ca] transform hover:-translate-y-2 duration-400 rounded-tl-[100px] rounded-br-[100px] duration-200 text-[#6C372E] shadow-2xl shadow-[#ffffff]">
-                        Download My Resume
+            <div className="flex flex-row justify-between space-x-8 h-screen">
+              <div className="relative flex flex-col items-start justify-center space-y-1">
+                <motion.span
+                  className="font-medium text-black text-[95px] text-shadow ml-[15%]"
+                  initial={{ x: -100, opacity: 0 }}
+                  whileInView={{ x: 0, opacity: 1 }}
+                  transition={{ delay: 1.6, duration: 0.6 }}
+                  viewport={{ once: true }}
+                >
+                  I'm
+                </motion.span>
+                <motion.span
+                  className="font-medium text-black text-[95px] text-shadow ml-[25%]"
+                  initial={{ x: -100, opacity: 0 }}
+                  whileInView={{ x: 0, opacity: 1 }}
+                  transition={{ delay: 2.2, duration: 0.6 }}
+                  viewport={{ once: true }}
+                >
+                  Shruthi
+                </motion.span>
+                <motion.span
+                  className="font-medium text-black text-[95px] text-shadow ml-[36%]"
+                  initial={{ x: -100, opacity: 0 }}
+                  whileInView={{ x: 0, opacity: 1 }}
+                  transition={{ delay: 2.8, duration: 0.6 }}
+                  viewport={{ once: true }}
+                >
+                  Yenamagandla
+                </motion.span>
+                <motion.span
+                  className="font-medium text-black text-[25px] text-shadow ml-[38%] italic"
+                  initial={{ opacity: 0, scale: 1 }}
+                  transition={{ delay: 3.4, duration: 1.5 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  viewport={{ once: true }}
+                >
+                  Scroll down to view my work!
+                </motion.span>
+              </div>
+
+              <div className="flex items-center justify-end pr-32 w-1/2">
+                <motion.div
+                  initial={{ opacity: 0, scale: 1 }}
+                  transition={{ delay: 3.4, duration: 1.5 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  viewport={{ once: true }}
+                >
+                  <div className="relative flex flex-col bg-[#FFFFFF] p-14 rounded-md">
+                    <p className="text-lg text-[#000000] font-bold tracking-widest leading-wide h-[460px] w-[400px]">
+                      <div className="">Hello,</div> <br/>
+                      I'm a junior at the
+                      <span className="hover:bg-[#ffe0de] p-1 rounded-md"> University of Houston</span> majoring in
+                      <span className="hover:bg-[#ffe0de] p-1 rounded-md"> Computer Science</span> and minoring in
+                      <span className="hover:bg-[#ffe0de] p-1 rounded-md"> Mathematics</span>.
+                      As you step into my world on this website, you will find my projects and other 
+                      <span className="hover:bg-[#ffe0de] p-1 rounded-md"> passion</span>
+                      work evolved through my 
+                      <span className="hover:bg-[#ffe0de] p-1 rounded-md"> curiosity</span>.
+                      I invite you to explore the projects I've dedicated my time and 
+                      <span className="hover:bg-[#ffe0de] p-1 rounded-md"> knowledge</span> 
+                      to, each representing a token of my growth and experience fostered through hardwork and amazing professors.
+                      Click down below to access my 
+                      <span className="hover:bg-[#ffd7d4] p-1 rounded-md">resume</span> right here!
+                    </p>
+                    <a href={resumeSY} target="_blank" rel="noopener noreferrer" className="text-lg bg-gradient-to-tr from-[#ffc7bd] via-[#ffe1df] to-[#ffc7bd] py-3 px-16 cursor-pointer hover:bg-[#ffd2ca] transform hover:-translate-y-2 duration-400 rounded-tl-[100px] rounded-br-[100px] duration-200 text-[#000000] shadow-2xl shadow-[#b17a7a] mx-auto text-center">
+                      Download My Resume
                     </a>
                   </div>
-                </div>
-                <img src={ profile1 } alt="Profile Image 1" className="flex w-[700px] h-[580px]"/>
+                </motion.div>
               </div>
             </div>
-          </motion.div>
+          </div>
         </section>
-        {/* ABOUT END */}
 
-        <section id="ProjectsIntro">
-          <motion.div
-            initial={{ opacity: 0.5, scale: 0.3 }}
-            transition={{ duration: 2 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-          >
-            <div className="relative mt-[100px] bg-[url('/Users/yshru/WebsiteTailwindVite/my-project/src/assets/stripesbg.png')] bg-cover bg-center h-screen flex flex-col items-start justify-center space-y-1">
-              <span className="font-medium text-black text-[95px] text-shadow ml-[30%]">I'm</span>
-              <span className="font-medium text-black text-[95px] text-shadow ml-[35%]">Shruthi</span>
-              <span className="font-medium text-black text-[95px] text-shadow ml-[43%]">Yenamagandla</span>
-              <span className="text-black text-[30px] text-shadow italic ml-[44%]">Scroll down to view my work!</span>
-            </div> 
-          </motion.div>
-        </section>
 
 
         <section id="Projects"> 
-          <div className="mt-[100px] flex flex-col">
+          <div className="mt-[200px] flex flex-col">
             <motion.div
               initial={{ opacity: 0.5, scale: 0.3 }}
               transition={{ duration: 2 }}
