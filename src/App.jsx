@@ -43,14 +43,14 @@ export function App() {
       title: "The Dawn of Innovation",
       description: "Explore the birth of groundbreaking ideas and inventions.",
       header: <Skeleton />,
-      className: "md:col-span-2 h-[450px] w-[560px]",
+      className: "md:col-span-2",
       icon: <IconClipboardCopy className="h-4 w-4 text-neutral-500" />,
     },
     {
       title: "The Digital Revolution",
       description: "Dive into the transformative power of technology.",
       header: <Skeleton />,
-      className: "md:col-span-1 h-[450px] w-[450px]",
+      className: "md:col-span-1",
       icon: <IconFileBroken className="h-4 w-4 text-neutral-500" />,
     },
     {
