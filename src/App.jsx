@@ -19,7 +19,7 @@ import { FlipWords } from "/Users/yshru/WebsiteTailwindVite/my-project/component
 // import { Me } from "/Users/yshru/WebsiteTailwindVite/my-project/components/moreAboutMe.jsx";
 
 import { FaGithub, FaLinkedin, FaFigma, FaPython, FaHtml5, FaReact, FaNodeJs, FaNpm, FaGit} from 'react-icons/fa';
-import { SiTailwindcss, SiTypescript, SiMysql, SiVite, SiCplusplus, SiJavascript, SiNotion, SiR } from 'react-icons/si';
+import { SiTailwindcss, SiTypescript, SiMysql, SiVite, SiCplusplus, SiJavascript, SiNotion } from 'react-icons/si';
 import { FaPhone } from 'react-icons/fa';
 import { IconHome, IconMessage, IconUser } from "@tabler/icons-react";
 // still need sql icon
@@ -32,7 +32,7 @@ import { IconClipboardCopy, IconFileBroken, IconSignature, IconTableColumn} from
 
 export function App() {
   {/* Any usestates or arrays here */}
-  const words = ["Hello,", "Hola,", "नमस्ते,", "안녕하세요,", "హలో,", "こんにちは," ];
+  const words = ["Hello,", "Hola,", "नमस्ते,", "안녕하세요,", "హలో,"];
   const words_2 = ["University of Houston", "Computer Science", "Mathematics"];
 
   const Skeleton = () => (
@@ -74,7 +74,7 @@ export function App() {
     <>
       {/* Work here */}
       {/* Overall Page */}
-      <div className="flex flex-col justify-center overflow-y-auto min-h-screen bg-gradient-to-b from-[#ffd3cb] via-[#ffe1db] to-[#fff6f6]"> 
+      <div className="flex flex-col justify-center overflow-y-auto min-h-screen bg-[#FFE0DA]"> 
 
         {/* HEADER */}
         <section id="Header">
@@ -82,7 +82,7 @@ export function App() {
             <div className="flex flex-row w-full justify-between items-center px-10">
               {/* Left side buttons */}
               <div className="flex flex-row items-center space-x-5 pl-[410px]">
-                <a href="#Projects" className="py-3 px-5 cursor-pointer transform hover:-translate-y-1 duration-100 text-black">
+                <a href="#Skills" className="py-3 px-5 cursor-pointer transform hover:-translate-y-1 duration-100 text-black">
                   Projects
                 </a>
                 <a href="#Skills" className="py-3 px-5 cursor-pointer transform hover:-translate-y-1 duration-100 text-black">
@@ -185,7 +185,7 @@ export function App() {
                 <motion.span
                   className="font-medium text-black text-[25px] text-shadow ml-[38%] italic"
                   initial={{ opacity: 0, scale: 1 }}
-                  transition={{ delay: 3.4, duration: 1.5 }}
+                  transition={{ delay: 4, duration: 1.5 }}
                   whileInView={{ opacity: 1, scale: 1 }}
                   viewport={{ once: true }}
                 >
@@ -196,7 +196,7 @@ export function App() {
               <div className="flex items-center justify-end pr-32 w-1/2">
                 <motion.div
                   initial={{ opacity: 0, scale: 1 }}
-                  transition={{ delay: 3.4, duration: 1.5 }}
+                  transition={{ delay: 3.7, duration: 1.5 }}
                   whileInView={{ opacity: 1, scale: 1 }}
                   viewport={{ once: true }}
                 >
@@ -229,16 +229,61 @@ export function App() {
 
 
 
-        <section id="Projects"> 
-          <div className="mt-[200px] flex flex-col">
-            <motion.div
-              initial={{ opacity: 0.5, scale: 0.3 }}
-              transition={{ duration: 2 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              > 
-              <div className="pl-16 text-[100px] text-[#6C372E] text-center"> Projects </div>
-            </motion.div>
+        <section id="Skills">
+          <div class="relative mt-[200px] w-full h-screen bg-cover bg-center bg-[url('/Users/yshru/WebsiteTailwindVite/my-project/src/assets/bg2.png')]">
+            <div className="flex flex-col space-y-[400px]">
+            <motion.span
+                  initial={{ y: 100, opacity: 0 }}
+                  whileInView={{ y: 5, opacity: 1 }}
+                  transition={{ duration: 0.8 }}
+                  viewport={{ once: true }}
+                >
+                <div className="font-medium text-black text-[110px] text-center">SKILLS</div>
+              </motion.span>
+              <motion.span
+                  initial={{ y: 100, opacity: 0 }}
+                  whileInView={{ y: 5, opacity: 1 }}
+                  transition={{ duration: 0.7 }}
+                  viewport={{ once: true }}
+                >
+                <div className="font-medium text-black text-[180px] text-center">PROJECTS</div>
+              </motion.span>
+            </div>
             
+            <motion.span
+                initial={{ opacity: 0, scale: 1 }}
+                transition={{ delay: 0.8, duration: 1.5 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+              >
+              <div className="flex flex-col">
+                <div className="absolute inset-0 top-1/4 flex flex-row space-x-8 text-[50px] justify-center text-[#fba394]">
+                  <FaPython className="transform hover:-translate-y-2 duration-100" />
+                  <SiCplusplus className="transform hover:-translate-y-2 duration-100"/>
+                  <FaHtml5 className="transform hover:-translate-y-2 duration-100" />
+                  <SiTailwindcss className="transform hover:-translate-y-2 duration-100"/>
+                  <SiJavascript className="transform hover:-translate-y-2 duration-100"/>
+                  <SiTypescript className="transform hover:-translate-y-2 duration-100"/>
+                  <FaGit className="transform hover:-translate-y-2 duration-100"/>
+                  <SiMysql className="transform hover:-translate-y-2 duration-100"/>
+                  <FaReact className="transform hover:-translate-y-2 duration-100" />
+                  <FaNodeJs className="transform hover:-translate-y-2 duration-100" />
+                </div>
+                <div className="absolute mt-[100px] inset-0 top-1/4 flex flex-row space-x-8 text-[50px] justify-center text-[#fba394]">
+                  <FaNpm className="transform hover:-translate-y-2 duration-100" />
+                  <SiVite className="transform hover:-translate-y-2 duration-100"/>
+                  <FaGithub className="transform hover:-translate-y-2 duration-100" />
+                  <FaFigma className="transform hover:-translate-y-2 duration-100" />
+                  <SiNotion className="transform hover:-translate-y-2 duration-100"/>
+                </div>
+              </div>
+            </motion.span>
+          </div>
+        </section>
+
+
+        <section id="Projects"> 
+          <div className="mt-[80px] flex flex-col">
             <BentoGrid className="max-w-4xl mx-auto md:auto-rows-[20rem]">
               {items.map((item, i) => (
                 <BentoGridItem
@@ -253,48 +298,6 @@ export function App() {
             </BentoGrid>
           </div>
         </section>
-
-        {/* SKILLS */}
-        <section id="Skills">
-          <div className="flex pt-8 mt-[150px] items-center justify-center">
-            <motion.div
-              className="tracking-wider text-8xl text-[#6C372E] font-medium text-center"
-              initial={{ opacity: 0, y: 50 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{
-                delay: 0.3,
-                duration: 2.5,
-              }}>
-                <div className="flex p-16 bg-gradient-to-br from-[#ffcfcf] to-[#ffc4ba] shadow-xl rounded-[50px]">
-                  <div className="flex flex-col space-y-12 text-white text-7xl">
-                    <div className="flex flex-row space-x-12">
-                      <FaPython className="transform hover:-translate-y-1 duration-100" />
-                      <SiCplusplus className="transform hover:-translate-y-1 duration-100"/>
-                      <FaHtml5 className="transform hover:-translate-y-1 duration-100" />
-                      <SiTailwindcss className="transform hover:-translate-y-1 duration-100"/>
-                      <SiJavascript className="transform hover:-translate-y-1 duration-100"/>
-                    </div>
-                    <div className="flex flex-row space-x-12">
-                      <SiTypescript className="transform hover:-translate-y-1 duration-100"/>
-                      <FaGit className="transform hover:-translate-y-1 duration-100"/>
-                      <SiMysql className="transform hover:-translate-y-1 duration-100"/>
-                      <FaReact className="transform hover:-translate-y-1 duration-100" />
-                      <FaNodeJs className="transform hover:-translate-y-1 duration-100" />
-                    </div>
-                    <div className="flex flex-row space-x-12">
-                      <FaNpm className="transform hover:-translate-y-1 duration-100" />
-                      <SiVite className="transform hover:-translate-y-1 duration-100"/>
-                      <FaGithub className="transform hover:-translate-y-1 duration-100" />
-                      <FaFigma className="transform hover:-translate-y-1 duration-100" />
-                      <SiNotion className="transform hover:-translate-y-1 duration-100"/>
-                    </div>
-                  </div>
-                </div>
-            </motion.div>
-          </div>
-        </section>
-        {/* SKILLS END */}
-
 
         {/* CONTACT */}
         <section id="Contact">
