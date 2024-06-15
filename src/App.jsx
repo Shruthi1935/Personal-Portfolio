@@ -201,7 +201,7 @@ export function App() {
                   viewport={{ once: true }}
                 >
                   <div className="relative flex flex-col bg-[#FFFFFF] p-14 rounded-md">
-                    <p className="text-lg text-[#000000] font-bold tracking-widest leading-wide h-[460px] w-[400px]">
+                    <p className="text-lg text-[#6C372E] font-extrabold tracking-widest leading-wide h-[460px] w-[400px]">
                       <div className="">Hello,</div> <br/>
                       I'm a junior at the
                       <span className="hover:bg-[#ffe0de] p-1 rounded-md"> University of Houston</span> majoring in
@@ -217,7 +217,7 @@ export function App() {
                       Click down below to access my 
                       <span className="hover:bg-[#ffd7d4] p-1 rounded-md">resume</span> right here!
                     </p>
-                    <a href={resumeSY} target="_blank" rel="noopener noreferrer" className="text-lg bg-gradient-to-tr from-[#ffc7bd] via-[#ffe1df] to-[#ffc7bd] py-3 px-16 cursor-pointer hover:bg-[#ffd2ca] transform hover:-translate-y-2 duration-400 rounded-tl-[100px] rounded-br-[100px] duration-200 text-[#000000] shadow-2xl shadow-[#b17a7a] mx-auto text-center">
+                    <a href={resumeSY} target="_blank" rel="noopener noreferrer" className="text-lg bg-gradient-to-tr from-[#ffc7bd] via-[#ffe1df] to-[#ffc7bd] py-3 px-16 cursor-pointer hover:bg-[#ffd2ca] transform hover:-translate-y-2 duration-400 rounded-tl-[100px] rounded-br-[100px] duration-200 text-[#6C372E] font-bold shadow-2xl shadow-[#b17a7a] mx-auto text-center">
                       Download My Resume
                     </a>
                   </div>
