@@ -492,32 +492,31 @@ body {
 <span className="text-black text-[30px] text-shadow italic ml-[27%]">Scroll down to view my work!</span>
 */}
 
-<section id="Skills">
-          <div class="relative mt-[50px] w-full h-screen bg-cover bg-center bg-[url('/Users/yshru/WebsiteTailwindVite/my-project/src/assets/bg2.png')]">
-            <div className="flex flex-col space-y-[400px]">
-              <div className="font-medium text-black text-[110px] text-center">SKILLS</div>
-              <div className="font-medium text-black text-[180px] text-center">PROJECTS</div>
-            </div>
-            <div className="absolute inset-0 top-1/4 flex flex-row space-x-6 text-[#FFB3A5] text-[50px] justify-center">
-            <div className="relative">
-              <div className="absolute flex items-center justify-center w-16 h-16 rounded-full bg-blue-500">
-                <FaPython className="text-white text-2xl transform hover:-translate-y-1 duration-100" />
-              </div>
-            </div>
-              <SiCplusplus className="transform hover:-translate-y-1 duration-100"/>
-              <FaHtml5 className="transform hover:-translate-y-1 duration-100" />
-              <SiTailwindcss className="transform hover:-translate-y-1 duration-100"/>
-              <SiJavascript className="transform hover:-translate-y-1 duration-100"/>
-              <SiTypescript className="transform hover:-translate-y-1 duration-100"/>
-              <FaGit className="transform hover:-translate-y-1 duration-100"/>
-              <SiMysql className="transform hover:-translate-y-1 duration-100"/>
-              <FaReact className="transform hover:-translate-y-1 duration-100" />
-              <FaNodeJs className="transform hover:-translate-y-1 duration-100" />
-              <FaNpm className="transform hover:-translate-y-1 duration-100" />
-              <SiVite className="transform hover:-translate-y-1 duration-100"/>
-              <FaGithub className="transform hover:-translate-y-1 duration-100" />
-              <FaFigma className="transform hover:-translate-y-1 duration-100" />
-              <SiNotion className="transform hover:-translate-y-1 duration-100"/>
-            </div>
-          </div>
-        </section>
+<motion.span
+initial={{ y: 100, opacity: 0 }}
+whileInView={{ y: 5, opacity: 1 }}
+transition={{ duration: 0.8 }}
+viewport={{ once: true }}
+>
+<div className="flex flex-col">
+<div className="absolute inset-0 top-1/4 flex flex-row space-x-8 text-[50px] justify-center text-[#fba394]">
+  <FaPython className="transform hover:-translate-y-2 duration-100" />
+  <SiCplusplus className="transform hover:-translate-y-2 duration-100"/>
+  <FaHtml5 className="transform hover:-translate-y-2 duration-100" />
+  <SiTailwindcss className="transform hover:-translate-y-2 duration-100"/>
+  <SiJavascript className="transform hover:-translate-y-2 duration-100"/>
+  <SiTypescript className="transform hover:-translate-y-2 duration-100"/>
+  <FaGit className="transform hover:-translate-y-2 duration-100"/>
+  <SiMysql className="transform hover:-translate-y-2 duration-100"/>
+  <FaReact className="transform hover:-translate-y-2 duration-100" />
+  <FaNodeJs className="transform hover:-translate-y-2 duration-100" />
+</div>
+<div className="absolute mt-[100px] inset-0 top-1/4 flex flex-row space-x-8 text-[50px] justify-center text-[#fba394]">
+  <FaNpm className="transform hover:-translate-y-2 duration-100" />
+  <SiVite className="transform hover:-translate-y-2 duration-100"/>
+  <FaGithub className="transform hover:-translate-y-2 duration-100" />
+  <FaFigma className="transform hover:-translate-y-2 duration-100" />
+  <SiNotion className="transform hover:-translate-y-2 duration-100"/>
+</div>
+</div>
+</motion.span>

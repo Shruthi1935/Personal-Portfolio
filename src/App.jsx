@@ -25,7 +25,7 @@ import { IconHome, IconMessage, IconUser } from "@tabler/icons-react";
 // still need sql icon
 
 import { cn } from "/Users/yshru/WebsiteTailwindVite/my-project/utils/cn5.js";
-import { BentoGrid, BentoGridItem } from "/Users/yshru/WebsiteTailwindVite/my-project/components/bento-grid.jsx";
+//import { BentoGrid, BentoGridItem } from "/Users/yshru/WebsiteTailwindVite/my-project/components/bento-grid.jsx";
 import { IconClipboardCopy, IconFileBroken, IconSignature, IconTableColumn} from "@tabler/icons-react";
 
 
@@ -232,18 +232,18 @@ export function App() {
         <section id="Skills">
           <div class="relative mt-[200px] w-full h-screen bg-cover bg-center bg-[url('/Users/yshru/WebsiteTailwindVite/my-project/src/assets/bg2.png')]">
             <div className="flex flex-col space-y-[400px]">
-            <motion.span
-                  initial={{ y: 100, opacity: 0 }}
+              <motion.span
+                  initial={{ y: 300, opacity: 0 }}
                   whileInView={{ y: 5, opacity: 1 }}
-                  transition={{ duration: 0.8 }}
+                  transition={{ duration: 0.9 }}
                   viewport={{ once: true }}
                 >
                 <div className="font-medium text-black text-[110px] text-center">SKILLS</div>
               </motion.span>
               <motion.span
-                  initial={{ y: 100, opacity: 0 }}
+                  initial={{ y: 250, opacity: 0 }}
                   whileInView={{ y: 5, opacity: 1 }}
-                  transition={{ duration: 0.7 }}
+                  transition={{ duration: 0.9 }}
                   viewport={{ once: true }}
                 >
                 <div className="font-medium text-black text-[180px] text-center">PROJECTS</div>
@@ -251,9 +251,9 @@ export function App() {
             </div>
             
             <motion.span
-                initial={{ opacity: 0, scale: 1 }}
-                transition={{ delay: 0.8, duration: 1.5 }}
-                whileInView={{ opacity: 1, scale: 1 }}
+                initial={{ y: 300, opacity: 0 }}
+                whileInView={{ y: 5, opacity: 1 }}
+                transition={{ duration: 0.5 }}
                 viewport={{ once: true }}
               >
               <div className="flex flex-col">
@@ -283,21 +283,27 @@ export function App() {
 
 
         <section id="Projects"> 
-          <div className="mt-[80px] flex flex-col">
-            <BentoGrid className="max-w-4xl mx-auto md:auto-rows-[20rem]">
-              {items.map((item, i) => (
-                <BentoGridItem
-                  key={i}
-                  title={item.title}
-                  description={item.description}
-                  header={item.header}
-                  className={item.className}
-                  icon={item.icon}
-                />
-              ))}
-            </BentoGrid>
+          <div className="flex h-screen w-full items-center justify-center mt-12 pl-44 pr-44">
+            <div className="grid h-full w-full grid-cols-7 grid-rows-10 gap-5">
+              <div className="bg-[#FFF6F4] col-span-4 row-span-5 flex justify-center items-center">1
+              </div>
+              <div className="bg-[#FFF6F4] col-span-3 row-span-3 flex justify-center items-center">2
+              </div>
+              <div className="bg-[#FFF6F4] col-span-2 row-span-2 flex justify-center items-center">3
+              </div>
+              <div className="bg-[#FFF6F4] col-span-1 row-span-2 flex justify-center items-center">4
+              </div>
+
+              <div className="bg-[#FFF6F4] col-span-3 row-span-2 flex justify-center items-center">3
+              </div>
+              <div className="bg-[#FFF6F4] col-span-4 row-span-5 flex justify-center items-center">2
+              </div>
+              <div className="bg-[#FFF6F4] col-span-3 row-span-3 flex justify-center items-center">1</div>
+
+            </div>
           </div>
         </section>
+
 
         {/* CONTACT */}
         <section id="Contact">
