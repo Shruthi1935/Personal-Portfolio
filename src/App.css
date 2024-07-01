@@ -37,3 +37,6 @@ body {
   overflow-x: hidden;
 }
 
+.radial-gradient {
+  background: radial-gradient(circle at center, #ffffff, #ffb5aa);
+}

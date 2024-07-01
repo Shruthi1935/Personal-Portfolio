@@ -70,6 +70,12 @@ export function App() {
     },
   ];
 
+  const IconBG = ({ children }) => (
+    <div className="flex p-4 w-[65px] h-[65px] items-center justify-center radial-gradient rounded-full transform hover:-translate-y-2 duration-300 shadow-2xl shadow-[#b17a7a]">
+      {children}
+    </div>
+  );
+
   return (
     <>
       {/* Work here */}
@@ -103,7 +109,7 @@ export function App() {
                 </a>
               </div>
               {/* Contact button */}
-              <a href="#Contact" className="font-extrabold py-2 px-5 cursor-pointer transform hover:-translate-y-1 duration-100 text-black border border-black rounded-3xl ml-auto">
+              <a href="#Contact" className="font-extrabold py-2 px-5 cursor-pointer transform hover:-translate-y-1 duration-100 text-black border border-black rounded-3xl ml-auto shadow-2xl shadow-[#ffffff]">
                 Contact
               </a>
             </div>
@@ -200,8 +206,8 @@ export function App() {
                   whileInView={{ opacity: 1, scale: 1 }}
                   viewport={{ once: true }}
                 >
-                  <div className="relative flex flex-col bg-[#FFFFFF] p-14 rounded-md">
-                    <p className="text-lg text-[#6C372E] font-extrabold tracking-widest leading-wide h-[460px] w-[400px]">
+                  <div className="relative flex flex-col space-y-6 bg-[#FFFFFF] p-14 rounded-md shadow-2xl shadow-[#b17a7a]">
+                    <p className="text-lg text-[#6C372E] font-semibold tracking-widest leading-wide h-[460px] w-[400px]">
                       <div className="">Hello,</div> <br/>
                       I'm a junior at the
                       <span className="hover:bg-[#ffe0de] p-1 rounded-md"> University of Houston</span> majoring in
@@ -231,14 +237,14 @@ export function App() {
 
         <section id="Skills">
           <div class="relative mt-[200px] w-full h-screen bg-cover bg-center bg-[url('/Users/yshru/WebsiteTailwindVite/my-project/src/assets/bg2.png')]">
-            <div className="flex flex-col space-y-[400px]">
+            <div className="flex flex-col space-y-[440px]">
               <motion.span
                   initial={{ y: 300, opacity: 0 }}
                   whileInView={{ y: 5, opacity: 1 }}
                   transition={{ duration: 0.9 }}
                   viewport={{ once: true }}
                 >
-                <div className="font-medium text-black text-[110px] text-center">SKILLS</div>
+                <div className="font-medium text-black text-[90px] text-center">SKILLS</div>
               </motion.span>
               <motion.span
                   initial={{ y: 250, opacity: 0 }}
@@ -246,35 +252,35 @@ export function App() {
                   transition={{ duration: 0.9 }}
                   viewport={{ once: true }}
                 >
-                <div className="font-medium text-black text-[180px] text-center">PROJECTS</div>
+                <div className="font-medium text-black text-[160px] text-center">PROJECTS</div>
               </motion.span>
             </div>
             
             <motion.span
                 initial={{ y: 300, opacity: 0 }}
                 whileInView={{ y: 5, opacity: 1 }}
-                transition={{ duration: 0.5 }}
+                transition={{ duration: 0.9 }}
                 viewport={{ once: true }}
               >
               <div className="flex flex-col">
-                <div className="absolute inset-0 top-1/4 flex flex-row space-x-8 text-[50px] justify-center text-[#fba394]">
-                  <FaPython className="transform hover:-translate-y-2 duration-100" />
-                  <SiCplusplus className="transform hover:-translate-y-2 duration-100"/>
-                  <FaHtml5 className="transform hover:-translate-y-2 duration-100" />
-                  <SiTailwindcss className="transform hover:-translate-y-2 duration-100"/>
-                  <SiJavascript className="transform hover:-translate-y-2 duration-100"/>
-                  <SiTypescript className="transform hover:-translate-y-2 duration-100"/>
-                  <FaGit className="transform hover:-translate-y-2 duration-100"/>
-                  <SiMysql className="transform hover:-translate-y-2 duration-100"/>
-                  <FaReact className="transform hover:-translate-y-2 duration-100" />
-                  <FaNodeJs className="transform hover:-translate-y-2 duration-100" />
+                <div className="absolute inset-0 mt-[185px] flex flex-row space-x-8 text-[40px] justify-center text-[#6C372E]">
+                  <IconBG> <FaPython className=""/> </IconBG>
+                  <IconBG> <SiCplusplus className=""/> </IconBG>
+                  <IconBG> <FaHtml5 className="" /> </IconBG>
+                  <IconBG> <SiTailwindcss className=""/> </IconBG>
+                  <IconBG> <SiJavascript className=""/></IconBG>
+                  <IconBG> <SiTypescript className=""/> </IconBG>
+                  <IconBG> <FaGit className=""/> </IconBG>
+                  <IconBG> <SiMysql className=""/> </IconBG>
+                  <IconBG> <FaReact className="" /> </IconBG>
+                  <IconBG> <FaNodeJs className="" /> </IconBG>
                 </div>
-                <div className="absolute mt-[100px] inset-0 top-1/4 flex flex-row space-x-8 text-[50px] justify-center text-[#fba394]">
-                  <FaNpm className="transform hover:-translate-y-2 duration-100" />
-                  <SiVite className="transform hover:-translate-y-2 duration-100"/>
-                  <FaGithub className="transform hover:-translate-y-2 duration-100" />
-                  <FaFigma className="transform hover:-translate-y-2 duration-100" />
-                  <SiNotion className="transform hover:-translate-y-2 duration-100"/>
+                <div className="absolute inset-0 top-1/4 mt-[60px] flex flex-row space-x-8 text-[40px] justify-center text-[#6C372E]">
+                  <IconBG> <FaNpm className="" /> </IconBG>
+                  <IconBG> <SiVite className=""/> </IconBG>
+                  <IconBG> <FaGithub className="" /> </IconBG>
+                  <IconBG> <FaFigma className="" /> </IconBG>
+                  <IconBG> <SiNotion className=""/> </IconBG>
                 </div>
               </div>
             </motion.span>
@@ -286,19 +292,33 @@ export function App() {
           <div className="flex h-screen w-full items-center justify-center mt-12 pl-44 pr-44">
             <div className="grid h-full w-full grid-cols-7 grid-rows-10 gap-5">
               <div className="bg-[#FFF6F4] col-span-4 row-span-5 flex justify-center items-center">1
+
               </div>
               <div className="bg-[#FFF6F4] col-span-3 row-span-3 flex justify-center items-center">2
+
               </div>
-              <div className="bg-[#FFF6F4] col-span-2 row-span-2 flex justify-center items-center">3
+
+              <div className="bg-[#FFF6F4] col-span-2 row-span-2 flex justify-center items-center">
+                <div className="flex flex-row space-x-3 pr-16">
+                  <a href="https://github.com/Shruthi1935" target="_blank" rel="noopener noreferrer">
+                    <FaGithub className="text-6xl text-[#000000] hover:text-[#333] hover:-translate-y-1 duration-400 duration-200" />
+                  </a>
+                  <a href="https://www.linkedin.com/in/shruthi-yenamagandla-23883428b/" target="_blank" rel="noopener noreferrer">
+                    <FaLinkedin className="text-6xl text-[#000000] hover:text-[#0e76a8] hover:-translate-y-1 duration-400 duration-200" />
+                  </a>
+                </div>
               </div>
+
               <div className="bg-[#FFF6F4] col-span-1 row-span-2 flex justify-center items-center">4
+
               </div>
 
               <div className="bg-[#FFF6F4] col-span-3 row-span-2 flex justify-center items-center">3
               </div>
               <div className="bg-[#FFF6F4] col-span-4 row-span-5 flex justify-center items-center">2
               </div>
-              <div className="bg-[#FFF6F4] col-span-3 row-span-3 flex justify-center items-center">1</div>
+              <div className="bg-[#FFF6F4] col-span-3 row-span-3 flex justify-center items-center">1
+              </div>
 
             </div>
           </div>
