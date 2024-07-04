@@ -520,3 +520,49 @@ viewport={{ once: true }}
 </div>
 </div>
 </motion.span>
+
+
+{/* CONTACT */}
+<section id="Contact">
+<form action="https://api.web3forms.com/submit" method="POST" className="mt-[150px]">
+  <input type="hidden" name="access_key" value="23967d50-3be6-44b1-afb6-7971b65b89f8" />
+  <div className="pt-16 flex justify-center">
+    <div className="flex flex-col space-y-14">
+      <div className="pl-16 text-[80px] text-[#6C372E] text-center">Let's Get In Touch!</div>
+      <div className="p-16 flex flex-col space-y-10 bg-gradient-to-tr from-[#ffcfcf] to-[#ffc4ba] shadow-xl rounded-tl-[150px] rounded-br-[150px]">
+        <div className="text-center text-2xl text-[#6C372E]">Contact Form</div>
+        <div className="flex flex-col space-y-5 items-center">
+          <input
+            placeholder="Name"
+            name="name"
+            className="bg-white w-[900px] px-8 py-3 text-[#6C372E] rounded-[60px] hover:bg-[#f9f5f5]"
+            type="text"
+            required
+          />
+          <input
+            placeholder="Email"
+            name="email"
+            className="bg-white w-[900px] px-8 py-3 text-[#6C372E] rounded-[60px] hover:bg-[#f9f5f5]"
+            type="email"
+            required
+          />
+          <input
+            placeholder="Message"
+            name="message"
+            className="bg-white w-[900px] h-[200px] px-8 py-3 text-[#6C372E] rounded-[30px] hover:bg-[#f9f5f5]"
+            type="text"
+            required
+          />
+          <button
+            type="submit"
+            className="px-12 py-3 text-[#6C372E] rounded-[60px] bg-white transform hover:-translate-y-1 duration-400 duration-200 shadow-[0_0_30px_white]"
+          >
+            Send!
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</form>
+</section>
+{/* CONTACT END */}

@@ -71,7 +71,7 @@ export function App() {
   ];
 
   const IconBG = ({ children }) => (
-    <div className="flex p-4 w-[65px] h-[65px] items-center justify-center radial-gradient rounded-full transform hover:-translate-y-2 duration-300 shadow-2xl shadow-[#b17a7a]">
+    <div className="flex p-4 w-[65px] h-[65px] items-center justify-center radial-gradient rounded-full transform hover:-translate-y-2 duration-300 shadow-2xl shadow-[#ce9090]">
       {children}
     </div>
   );
@@ -151,18 +151,18 @@ export function App() {
         <section id="About">
           <div className="relative mt-[100px]">
             <motion.div
-              initial={{ opacity: 0, scale: 0.3 }}
+              initial={{ opacity: 0, scale: 1 }}
               transition={{ duration: 1.6 }}
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
             >
-              <div className="absolute inset-0 bg-[url('/Users/yshru/WebsiteTailwindVite/my-project/src/assets/stripesbg.png')] bg-cover bg-center h-screen"></div>
+              <div className="absolute inset-0 min-w-screen bg-gradient-to-tr from-[#ffc7bd] via-[#fde8e6] to-[#ffc7bd] shadow-2xl shadow-[#ffffff]"></div>
             </motion.div>
 
             <div className="flex flex-row justify-between space-x-8 h-screen">
               <div className="relative flex flex-col items-start justify-center space-y-1">
                 <motion.span
-                  className="font-medium text-black text-[95px] text-shadow ml-[15%]"
+                  className="font-medium text-[#6C372E] text-[95px] text-shadow ml-[15%]"
                   initial={{ x: -100, opacity: 0 }}
                   whileInView={{ x: 0, opacity: 1 }}
                   transition={{ delay: 1.6, duration: 0.6 }}
@@ -171,7 +171,7 @@ export function App() {
                   I'm
                 </motion.span>
                 <motion.span
-                  className="font-medium text-black text-[95px] text-shadow ml-[25%]"
+                  className="font-medium text-[#6C372E] text-[95px] text-shadow ml-[25%]"
                   initial={{ x: -100, opacity: 0 }}
                   whileInView={{ x: 0, opacity: 1 }}
                   transition={{ delay: 2.2, duration: 0.6 }}
@@ -180,7 +180,7 @@ export function App() {
                   Shruthi
                 </motion.span>
                 <motion.span
-                  className="font-medium text-black text-[95px] text-shadow ml-[36%]"
+                  className="font-medium text-[#6C372E] text-[95px] text-shadow ml-[36%]"
                   initial={{ x: -100, opacity: 0 }}
                   whileInView={{ x: 0, opacity: 1 }}
                   transition={{ delay: 2.8, duration: 0.6 }}
@@ -189,7 +189,7 @@ export function App() {
                   Yenamagandla
                 </motion.span>
                 <motion.span
-                  className="font-medium text-black text-[25px] text-shadow ml-[38%] italic"
+                  className="font-medium text-[#6C372E] text-[25px] text-shadow ml-[38%] italic"
                   initial={{ opacity: 0, scale: 1 }}
                   transition={{ delay: 4, duration: 1.5 }}
                   whileInView={{ opacity: 1, scale: 1 }}
@@ -236,7 +236,7 @@ export function App() {
 
 
         <section id="Skills">
-          <div class="relative mt-[200px] w-full h-screen bg-cover bg-center bg-[url('/Users/yshru/WebsiteTailwindVite/my-project/src/assets/bg2.png')]">
+          <div class="relative mt-[150px] w-full h-screen bg-cover bg-center bg-[url('/Users/yshru/WebsiteTailwindVite/my-project/src/assets/bg2.png')]">
             <div className="flex flex-col space-y-[440px]">
               <motion.span
                   initial={{ y: 300, opacity: 0 }}
@@ -246,6 +246,7 @@ export function App() {
                 >
                 <div className="font-medium text-black text-[90px] text-center">SKILLS</div>
               </motion.span>
+              
               <motion.span
                   initial={{ y: 250, opacity: 0 }}
                   whileInView={{ y: 5, opacity: 1 }}
@@ -263,7 +264,7 @@ export function App() {
                 viewport={{ once: true }}
               >
               <div className="flex flex-col">
-                <div className="absolute inset-0 mt-[185px] flex flex-row space-x-8 text-[40px] justify-center text-[#6C372E]">
+                <div className="absolute inset-0 mt-[185px] flex flex-row space-x-8 text-[40px] justify-center text-[#FFE0DA]">
                   <IconBG> <FaPython className=""/> </IconBG>
                   <IconBG> <SiCplusplus className=""/> </IconBG>
                   <IconBG> <FaHtml5 className="" /> </IconBG>
@@ -275,7 +276,7 @@ export function App() {
                   <IconBG> <FaReact className="" /> </IconBG>
                   <IconBG> <FaNodeJs className="" /> </IconBG>
                 </div>
-                <div className="absolute inset-0 top-1/4 mt-[60px] flex flex-row space-x-8 text-[40px] justify-center text-[#6C372E]">
+                <div className="absolute inset-0 top-1/4 mt-[60px] flex flex-row space-x-8 text-[40px] justify-center text-[#FFE0DA]">
                   <IconBG> <FaNpm className="" /> </IconBG>
                   <IconBG> <SiVite className=""/> </IconBG>
                   <IconBG> <FaGithub className="" /> </IconBG>
@@ -327,48 +328,36 @@ export function App() {
 
         {/* CONTACT */}
         <section id="Contact">
-          <form action="https://api.web3forms.com/submit" method="POST" className="mt-[150px]">
-            <input type="hidden" name="access_key" value="23967d50-3be6-44b1-afb6-7971b65b89f8" />
-            <div className="pt-16 flex justify-center">
-              <div className="flex flex-col space-y-14">
-                <div className="pl-16 text-[80px] text-[#6C372E] text-center">Let's Get In Touch!</div>
-                <div className="p-16 flex flex-col space-y-10 bg-gradient-to-tr from-[#ffcfcf] to-[#ffc4ba] shadow-xl rounded-tl-[150px] rounded-br-[150px]">
-                  <div className="text-center text-2xl text-[#6C372E]">Contact Form</div>
-                  <div className="flex flex-col space-y-5 items-center">
-                    <input
-                      placeholder="Name"
-                      name="name"
-                      className="bg-white w-[900px] px-8 py-3 text-[#6C372E] rounded-[60px] hover:bg-[#f9f5f5]"
-                      type="text"
-                      required
-                    />
-                    <input
-                      placeholder="Email"
-                      name="email"
-                      className="bg-white w-[900px] px-8 py-3 text-[#6C372E] rounded-[60px] hover:bg-[#f9f5f5]"
-                      type="email"
-                      required
-                    />
-                    <input
-                      placeholder="Message"
-                      name="message"
-                      className="bg-white w-[900px] h-[200px] px-8 py-3 text-[#6C372E] rounded-[30px] hover:bg-[#f9f5f5]"
-                      type="text"
-                      required
-                    />
-                    <button
-                      type="submit"
-                      className="px-12 py-3 text-[#6C372E] rounded-[60px] bg-white transform hover:-translate-y-1 duration-400 duration-200 shadow-[0_0_30px_white]"
-                    >
-                      Send!
-                    </button>
+          <div className="flex flex-row space-x-16 mt-[150px] pb-16 min-w-screen bg-gradient-to-tr from-[#ffc7bd] via-[#ffe3e1] to-[#ffc7bd] items-center justify-center">
+            
+            <div className="flex-col space-y-16">
+              <div className="mt-16 font-medium text-[#6C372E] text-[60px] text-center"> Let's Get in Touch! </div>
+              <form className="flex flex-col bg-[#ffffff] p-14">
+                <div className="flex flex-col space-y-8">
+                  <div className="flex flex-row space-x-16">
+                    <input type="text" name="name" placeholder="Full Name" className="p-2 border-b border-[#6C372E]" />
+                    <input type="tel" name="phone" placeholder="Phone Number" className="p-2 border-b border-[#6C372E]" />
                   </div>
+                  <input type="email" name="email" placeholder="Email" className="p-2 border-b border-[#6C372E]" />
+                  <textarea name="message" placeholder="Your Message" className="p-2 border border-[#6C372E]"></textarea>
+                  <button 
+                    type="submit" 
+                    className="text-md bg-gradient-to-tr from-[#ffc7bd] via-[#ffe1df] to-[#ffc7bd] py-2 px-12 cursor-pointer hover:bg-[#ffd2ca] transform hover:-translate-y-2 duration-400 rounded-tl-[100px] rounded-br-[100px] duration-200 text-[#6C372E] font-bold shadow-2xl shadow-[#b17a7a] mx-auto text-center">
+                    Send! 
+                  </button>
                 </div>
-              </div>
+              </form>
             </div>
-          </form>
+
+            <div className="font-medium text-[#6C372E] text-[60px] text-center"> hii
+
+            </div>
+
+          </div>
         </section>
         {/* CONTACT END */}
+
+
 
         {/* SOCIALS */}
         <section id="Socials">
