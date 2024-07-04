@@ -10,6 +10,7 @@ import { useNavigate } from 'react-router-dom';
 
 import profile1 from '/src/assets/1.jpeg';
 import resumeSY from '/src/assets/resume.pdf';
+import contact from '/Users/yshru/WebsiteTailwindVite/my-project/src/assets/Contact5.png'
 //import logo from '/src/assets/SYLogo.svg';
 
 import { SparklesCore } from '/Users/yshru/WebsiteTailwindVite/my-project/components/sparkles.jsx';
@@ -18,7 +19,7 @@ import { FlipWords } from "/Users/yshru/WebsiteTailwindVite/my-project/component
 // import { FloatingNav } from "/Users/yshru/WebsiteTailwindVite/my-project/components/floating-navbar.jsx";
 // import { Me } from "/Users/yshru/WebsiteTailwindVite/my-project/components/moreAboutMe.jsx";
 
-import { FaGithub, FaLinkedin, FaFigma, FaPython, FaHtml5, FaReact, FaNodeJs, FaNpm, FaGit} from 'react-icons/fa';
+import { FaGithub, FaLinkedin, FaFigma, FaPython, FaHtml5, FaReact, FaNodeJs, FaNpm, FaGit, FaEnvelope} from 'react-icons/fa';
 import { SiTailwindcss, SiTypescript, SiMysql, SiVite, SiCplusplus, SiJavascript, SiNotion } from 'react-icons/si';
 import { FaPhone } from 'react-icons/fa';
 import { IconHome, IconMessage, IconUser } from "@tabler/icons-react";
@@ -71,7 +72,7 @@ export function App() {
   ];
 
   const IconBG = ({ children }) => (
-    <div className="flex p-4 w-[65px] h-[65px] items-center justify-center radial-gradient rounded-full transform hover:-translate-y-2 duration-300 shadow-2xl shadow-[#ce9090]">
+    <div className="flex p-4 w-[65px] h-[65px] items-center justify-center radial-gradient rounded-full transform hover:-translate-y-2 duration-300 shadow-xl shadow-[#ae7474]">
       {children}
     </div>
   );
@@ -88,7 +89,7 @@ export function App() {
             <div className="flex flex-row w-full justify-between items-center px-10">
               {/* Left side buttons */}
               <div className="flex flex-row items-center space-x-5 pl-[410px]">
-                <a href="#Skills" className="py-3 px-5 cursor-pointer transform hover:-translate-y-1 duration-100 text-black">
+                <a href="#Projects" className="py-3 px-5 cursor-pointer transform hover:-translate-y-1 duration-100 text-black">
                   Projects
                 </a>
                 <a href="#Skills" className="py-3 px-5 cursor-pointer transform hover:-translate-y-1 duration-100 text-black">
@@ -96,7 +97,7 @@ export function App() {
                 </a>
               </div>
               {/* Website Name */}
-              <a href="#Hero" className="font-extrabold text-xl py-3 px-12 text-black text-center">
+              <a href="#Header" className="font-extrabold text-xl py-3 px-12 text-black text-center">
                 SHRUTHI <br /> YENAMAGANDLA
               </a>
               {/* Right side buttons */}
@@ -104,7 +105,7 @@ export function App() {
                 <a href="#About" className="py-3 px-5 cursor-pointer transform hover:-translate-y-1 duration-100 text-black">
                   About
                 </a>
-                <a href="#Socials" className="py-3 px-5 cursor-pointer transform hover:-translate-y-1 duration-100 text-black">
+                <a href="#Contact" className="py-3 px-5 cursor-pointer transform hover:-translate-y-1 duration-100 text-black">
                   Socials
                 </a>
               </div>
@@ -149,7 +150,7 @@ export function App() {
         {/* HERO END */}
 
         <section id="About">
-          <div className="relative mt-[100px]">
+          <div className="relative">
             <motion.div
               initial={{ opacity: 0, scale: 1 }}
               transition={{ duration: 1.6 }}
@@ -233,10 +234,8 @@ export function App() {
           </div>
         </section>
 
-
-
         <section id="Skills">
-          <div class="relative mt-[150px] w-full h-screen bg-cover bg-center bg-[url('/Users/yshru/WebsiteTailwindVite/my-project/src/assets/bg2.png')]">
+          <div class="relative mt-[90px] w-full h-screen bg-cover bg-center bg-[url('/Users/yshru/WebsiteTailwindVite/my-project/src/assets/bg2.png')]">
             <div className="flex flex-col space-y-[440px]">
               <motion.span
                   initial={{ y: 300, opacity: 0 }}
@@ -264,7 +263,7 @@ export function App() {
                 viewport={{ once: true }}
               >
               <div className="flex flex-col">
-                <div className="absolute inset-0 mt-[185px] flex flex-row space-x-8 text-[40px] justify-center text-[#FFE0DA]">
+                <div className="absolute inset-0 mt-[185px] flex flex-row space-x-8 text-[40px] justify-center text-[#FFF6F4]">
                   <IconBG> <FaPython className=""/> </IconBG>
                   <IconBG> <SiCplusplus className=""/> </IconBG>
                   <IconBG> <FaHtml5 className="" /> </IconBG>
@@ -276,7 +275,7 @@ export function App() {
                   <IconBG> <FaReact className="" /> </IconBG>
                   <IconBG> <FaNodeJs className="" /> </IconBG>
                 </div>
-                <div className="absolute inset-0 top-1/4 mt-[60px] flex flex-row space-x-8 text-[40px] justify-center text-[#FFE0DA]">
+                <div className="absolute inset-0 top-1/4 mt-[60px] flex flex-row space-x-8 text-[40px] justify-center text-[#FFF6F4]">
                   <IconBG> <FaNpm className="" /> </IconBG>
                   <IconBG> <SiVite className=""/> </IconBG>
                   <IconBG> <FaGithub className="" /> </IconBG>
@@ -290,97 +289,58 @@ export function App() {
 
 
         <section id="Projects"> 
-          <div className="flex h-screen w-full items-center justify-center mt-12 pl-44 pr-44">
-            <div className="grid h-full w-full grid-cols-7 grid-rows-10 gap-5">
-              <div className="bg-[#FFF6F4] col-span-4 row-span-5 flex justify-center items-center">1
-
-              </div>
-              <div className="bg-[#FFF6F4] col-span-3 row-span-3 flex justify-center items-center">2
-
-              </div>
-
-              <div className="bg-[#FFF6F4] col-span-2 row-span-2 flex justify-center items-center">
-                <div className="flex flex-row space-x-3 pr-16">
-                  <a href="https://github.com/Shruthi1935" target="_blank" rel="noopener noreferrer">
-                    <FaGithub className="text-6xl text-[#000000] hover:text-[#333] hover:-translate-y-1 duration-400 duration-200" />
-                  </a>
-                  <a href="https://www.linkedin.com/in/shruthi-yenamagandla-23883428b/" target="_blank" rel="noopener noreferrer">
-                    <FaLinkedin className="text-6xl text-[#000000] hover:text-[#0e76a8] hover:-translate-y-1 duration-400 duration-200" />
-                  </a>
-                </div>
-              </div>
-
-              <div className="bg-[#FFF6F4] col-span-1 row-span-2 flex justify-center items-center">4
-
-              </div>
-
-              <div className="bg-[#FFF6F4] col-span-3 row-span-2 flex justify-center items-center">3
-              </div>
-              <div className="bg-[#FFF6F4] col-span-4 row-span-5 flex justify-center items-center">2
-              </div>
-              <div className="bg-[#FFF6F4] col-span-3 row-span-3 flex justify-center items-center">1
-              </div>
-
-            </div>
-          </div>
+          
         </section>
 
 
         {/* CONTACT */}
         <section id="Contact">
-          <div className="flex flex-row space-x-16 mt-[150px] pb-16 min-w-screen bg-gradient-to-tr from-[#ffc7bd] via-[#ffe3e1] to-[#ffc7bd] items-center justify-center">
-            
-            <div className="flex-col space-y-16">
-              <div className="mt-16 font-medium text-[#6C372E] text-[60px] text-center"> Let's Get in Touch! </div>
-              <form className="flex flex-col bg-[#ffffff] p-14">
-                <div className="flex flex-col space-y-8">
-                  <div className="flex flex-row space-x-16">
-                    <input type="text" name="name" placeholder="Full Name" className="p-2 border-b border-[#6C372E]" />
-                    <input type="tel" name="phone" placeholder="Phone Number" className="p-2 border-b border-[#6C372E]" />
-                  </div>
-                  <input type="email" name="email" placeholder="Email" className="p-2 border-b border-[#6C372E]" />
-                  <textarea name="message" placeholder="Your Message" className="p-2 border border-[#6C372E]"></textarea>
-                  <button 
-                    type="submit" 
-                    className="text-md bg-gradient-to-tr from-[#ffc7bd] via-[#ffe1df] to-[#ffc7bd] py-2 px-12 cursor-pointer hover:bg-[#ffd2ca] transform hover:-translate-y-2 duration-400 rounded-tl-[100px] rounded-br-[100px] duration-200 text-[#6C372E] font-bold shadow-2xl shadow-[#b17a7a] mx-auto text-center">
-                    Send! 
-                  </button>
+        <div className="flex flex-row space-x-4 min-w-screen min-h-screen bg-gradient-to-tr from-[#ffc7bd] via-[#ffe3e1] to-[#ffc7bd]">
+          <form className="min-h-screen flex flex-col bg-[#ffffff] p-32">
+            <div className="flex flex-col space-y-24">
+              <div className="text-[#6C372E] text-[25px]"> Send a pigeon! </div>
+              <div className="flex flex-row space-x-32">
+                <input type="text" name="name" placeholder="Full Name" className="p-2 border-b border-[#6C372E]" />
+                <input type="tel" name="phone" placeholder="Phone Number" className="p-2 border-b border-[#6C372E]" />
+              </div>
+              <input type="email" name="email" placeholder="Email" className="p-2 border-b border-[#6C372E]" />
+              <textarea name="message" placeholder="Your Message" className="p-2 border-b border-[#6C372E] h-10"></textarea>
+              <button 
+                type="submit" 
+                className="text-md bg-gradient-to-tr from-[#ffc7bd] via-[#ffe1df] to-[#ffc7bd] py-2 px-12 cursor-pointer hover:bg-[#ffd2ca] transform hover:-translate-y-2 duration-400 rounded-tl-[100px] rounded-br-[100px] duration-200 text-[#6C372E] font-bold shadow-2xl shadow-[#b17a7a] mx-auto text-center">
+                Send! 
+              </button>
+            </div>
+          </form>
+
+          <div className="relative w-[800px] h-[800px] flex items-center justify-center">
+            <img src={contact} alt="Profile Image 1" className="w-full h-full object-cover"/>
+            <div className="absolute inset-0 flex flex-col space-y-6 justify-center pl-36">
+              <div className="text-[#6C372E] text-[75px]"> Just a <br/> Message Away </div>
+              <div className="flex flex-col space-y-4">
+                <div className="flex flex-row space-x-4">
+                  <FaPhone className="text-[20px] text-[#6C372E]" />
+                  <span className="text-[#6C372E]"> 346 - 955 - 8255</span>
                 </div>
-              </form>
+                <div className="flex flex-row space-x-4">
+                  <FaEnvelope className="text-[20px] text-[#6C372E]" />
+                  <span className="text-[#6C372E]"> yshruthi.14@gmail.com </span>
+                </div>
+                <div className="flex flex-row space-x-4 text-[25px] text-[#6C372E]">
+                  <a href="https://github.com/Shruthi1935" target="_blank" rel="noopener noreferrer">
+                    <FaGithub className="hover:text-[#333] hover:-translate-y-1 duration-400 duration-200" />
+                  </a>
+                  <a href="https://www.linkedin.com/in/shruthi-yenamagandla-23883428b/" target="_blank" rel="noopener noreferrer">
+                    <FaLinkedin className="hover:text-[#0e76a8] hover:-translate-y-1 duration-400 duration-200" />
+                  </a>
+                </div>
+              </div>
             </div>
-
-            <div className="font-medium text-[#6C372E] text-[60px] text-center"> hii
-
-            </div>
-
           </div>
-        </section>
+        </div>
+      </section>
+
         {/* CONTACT END */}
-
-
-
-        {/* SOCIALS */}
-        <section id="Socials">
-          <div className="flex flex-col font-medium text-[#6C372E] mt-[150px]">
-            <div className="flex pl-16 pt-4 pb-4 min-w-screen bg-gradient-to-b from-[#ffffff] to-[#FFD0C8] justify-between">
-              <div className="flex items-center space-x-2">
-                <FaPhone className="text-2xl text-[#6C372E]" />
-                <span className="text-[#6C372E]"> | 346 - 955 - 8255</span>
-              </div>
-
-              <div className="flex flex-row space-x-3 pr-16">
-                <a href="https://github.com/Shruthi1935" target="_blank" rel="noopener noreferrer">
-                  <FaGithub className="text-4xl text-[#6C372E] hover:text-[#333] hover:-translate-y-1 duration-400 duration-200" />
-                </a>
-                <a href="https://www.linkedin.com/in/shruthi-yenamagandla-23883428b/" target="_blank" rel="noopener noreferrer">
-                  <FaLinkedin className="text-4xl text-[#6C372E] hover:text-[#0e76a8] hover:-translate-y-1 duration-400 duration-200" />
-                </a>
-              </div>
-            </div>
-          </div>
-        </section>
-        {/* SOCIALS END */}
-
       </div>
     </>
   );
