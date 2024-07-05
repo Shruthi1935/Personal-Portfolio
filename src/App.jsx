@@ -11,6 +11,7 @@ import { useNavigate } from 'react-router-dom';
 import profile1 from '/src/assets/1.jpeg';
 import resumeSY from '/src/assets/resume.pdf';
 import contact from '/Users/yshru/WebsiteTailwindVite/my-project/src/assets/Contact5.png'
+import Swal from 'sweetalert2'
 //import logo from '/src/assets/SYLogo.svg';
 
 import { SparklesCore } from '/Users/yshru/WebsiteTailwindVite/my-project/components/sparkles.jsx';
@@ -31,51 +32,43 @@ import { IconClipboardCopy, IconFileBroken, IconSignature, IconTableColumn} from
 
 
 
-export function App() {
-  {/* Any usestates or arrays here */}
+export function App() 
+{
   const words = ["Hello,", "Hola,", "नमस्ते,", "안녕하세요,", "హలో,"];
-  const words_2 = ["University of Houston", "Computer Science", "Mathematics"];
-
-  const Skeleton = () => (
-    <div className="flex w-full h-full rounded-xl border border-transparent bg-neutral-100"></div>
-  );
-  const items = [
-    {
-      title: "The Dawn of Innovation",
-      description: "Explore the birth of groundbreaking ideas and inventions.",
-      header: <Skeleton />,
-      className: "md:col-span-2",
-      icon: <IconClipboardCopy className="h-4 w-4 text-neutral-500" />,
-    },
-    {
-      title: "The Digital Revolution",
-      description: "Dive into the transformative power of technology.",
-      header: <Skeleton />,
-      className: "md:col-span-1",
-      icon: <IconFileBroken className="h-4 w-4 text-neutral-500" />,
-    },
-    {
-      title: "The Art of Design",
-      description: "Discover the beauty of thoughtful and functional design.",
-      header: <Skeleton />,
-      className: "md:col-span-1",
-      icon: <IconSignature className="h-4 w-4 text-neutral-500" />,
-    },
-    {
-      title: "The Power of Communication",
-      description:
-        "Understand the impact of effective communication in our lives.",
-      header: <Skeleton />,
-      className: "md:col-span-2",
-      icon: <IconTableColumn className="h-4 w-4 text-neutral-500" />,
-    },
-  ];
 
   const IconBG = ({ children }) => (
     <div className="flex p-4 w-[65px] h-[65px] items-center justify-center radial-gradient rounded-full transform hover:-translate-y-2 duration-300 shadow-xl shadow-[#ae7474]">
       {children}
     </div>
   );
+
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+    const formData = new FormData(event.target);
+
+    formData.append("access_key", "23967d50-3be6-44b1-afb6-7971b65b89f8");
+
+    const object = Object.fromEntries(formData);
+    const json = JSON.stringify(object);
+
+    const res = await fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json"
+      },
+      body: json
+    }).then((res) => res.json());
+
+    if (res.success) {
+      console.log("Success", res);
+      Swal.fire({
+        title: "Pigeon Sent!",
+        text: "Your email was sent to Shruthi sucessfully :)",
+        icon: "success"
+      });
+    }
+  };
 
   return (
     <>
@@ -89,28 +82,28 @@ export function App() {
             <div className="flex flex-row w-full justify-between items-center px-10">
               {/* Left side buttons */}
               <div className="flex flex-row items-center space-x-5 pl-[410px]">
-                <a href="#Projects" className="py-3 px-5 cursor-pointer transform hover:-translate-y-1 duration-100 text-black">
+                <a href="#Projects" className="py-3 px-5 cursor-pointer transform hover:-translate-y-1 duration-100 text-[#421f18]">
                   Projects
                 </a>
-                <a href="#Skills" className="py-3 px-5 cursor-pointer transform hover:-translate-y-1 duration-100 text-black">
+                <a href="#Skills" className="py-3 px-5 cursor-pointer transform hover:-translate-y-1 duration-100 text-[#421f18]">
                   Skills
                 </a>
               </div>
               {/* Website Name */}
-              <a href="#Header" className="font-extrabold text-xl py-3 px-12 text-black text-center">
+              <a href="#Header" className="font-extrabold text-xl py-3 px-12 text-[#421f18] text-center">
                 SHRUTHI <br /> YENAMAGANDLA
               </a>
               {/* Right side buttons */}
               <div className="flex flex-row items-center space-x-5">
-                <a href="#About" className="py-3 px-5 cursor-pointer transform hover:-translate-y-1 duration-100 text-black">
+                <a href="#About" className="py-3 px-5 cursor-pointer transform hover:-translate-y-1 duration-100 text-[#421f18]">
                   About
                 </a>
-                <a href="#Contact" className="py-3 px-5 cursor-pointer transform hover:-translate-y-1 duration-100 text-black">
+                <a href="#Contact" className="py-3 px-5 cursor-pointer transform hover:-translate-y-1 duration-100 text-[#421f18]">
                   Socials
                 </a>
               </div>
               {/* Contact button */}
-              <a href="#Contact" className="font-extrabold py-2 px-5 cursor-pointer transform hover:-translate-y-1 duration-100 text-black border border-black rounded-3xl ml-auto shadow-2xl shadow-[#ffffff]">
+              <a href="#Contact" className="font-extrabold py-2 px-5 cursor-pointer transform hover:-translate-y-1 duration-100 text-[#421f18] border border-black rounded-3xl ml-auto shadow-2xl shadow-[#ffffff]">
                 Contact
               </a>
             </div>
@@ -118,7 +111,6 @@ export function App() {
         </section>
         {/* HEADER END */}
 
-        
         {/* HERO */}
         <section id="Hero">
           <div className="relative">
@@ -135,7 +127,7 @@ export function App() {
           <div className="absolute inset-0 mt-[80px] flex flex-col items-center justify-center min-w-full">
             <div className="flex flex-col space-y-28 pt-0">
               <motion.div
-                className="tracking-wider text-[#6C372E] text-center"
+                className="tracking-wider text-[#6F3A32] text-center"
                 initial={{ opacity: 0, y: 50 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 1.0, duration: 2.5, ease: "easeInOut" }}
@@ -149,6 +141,7 @@ export function App() {
         </section>
         {/* HERO END */}
 
+        {/* ABOUT */}
         <section id="About">
           <div className="relative">
             <motion.div
@@ -163,7 +156,7 @@ export function App() {
             <div className="flex flex-row justify-between space-x-8 h-screen">
               <div className="relative flex flex-col items-start justify-center space-y-1">
                 <motion.span
-                  className="font-medium text-[#6C372E] text-[95px] text-shadow ml-[15%]"
+                  className="font-medium text-[#421f18] text-[95px] text-shadow ml-[15%]"
                   initial={{ x: -100, opacity: 0 }}
                   whileInView={{ x: 0, opacity: 1 }}
                   transition={{ delay: 1.6, duration: 0.6 }}
@@ -172,7 +165,7 @@ export function App() {
                   I'm
                 </motion.span>
                 <motion.span
-                  className="font-medium text-[#6C372E] text-[95px] text-shadow ml-[25%]"
+                  className="font-medium text-[#421f18] text-[95px] text-shadow ml-[25%]"
                   initial={{ x: -100, opacity: 0 }}
                   whileInView={{ x: 0, opacity: 1 }}
                   transition={{ delay: 2.2, duration: 0.6 }}
@@ -181,7 +174,7 @@ export function App() {
                   Shruthi
                 </motion.span>
                 <motion.span
-                  className="font-medium text-[#6C372E] text-[95px] text-shadow ml-[36%]"
+                  className="font-medium text-[#421f18] text-[95px] text-shadow ml-[36%]"
                   initial={{ x: -100, opacity: 0 }}
                   whileInView={{ x: 0, opacity: 1 }}
                   transition={{ delay: 2.8, duration: 0.6 }}
@@ -190,7 +183,7 @@ export function App() {
                   Yenamagandla
                 </motion.span>
                 <motion.span
-                  className="font-medium text-[#6C372E] text-[25px] text-shadow ml-[38%] italic"
+                  className="font-medium text-[#421f18] text-[25px] text-shadow ml-[38%] italic"
                   initial={{ opacity: 0, scale: 1 }}
                   transition={{ delay: 4, duration: 1.5 }}
                   whileInView={{ opacity: 1, scale: 1 }}
@@ -208,7 +201,7 @@ export function App() {
                   viewport={{ once: true }}
                 >
                   <div className="relative flex flex-col space-y-6 bg-[#FFFFFF] p-14 rounded-md shadow-2xl shadow-[#b17a7a]">
-                    <p className="text-lg text-[#6C372E] font-semibold tracking-widest leading-wide h-[460px] w-[400px]">
+                    <p className="text-lg text-[#421f18] font-semibold tracking-widest leading-wide h-[460px] w-[400px]">
                       <div className="">Hello,</div> <br/>
                       I'm a junior at the
                       <span className="hover:bg-[#ffe0de] p-1 rounded-md"> University of Houston</span> majoring in
@@ -224,7 +217,7 @@ export function App() {
                       Click down below to access my 
                       <span className="hover:bg-[#ffd7d4] p-1 rounded-md">resume</span> right here!
                     </p>
-                    <a href={resumeSY} target="_blank" rel="noopener noreferrer" className="text-lg bg-gradient-to-tr from-[#ffc7bd] via-[#ffe1df] to-[#ffc7bd] py-3 px-16 cursor-pointer hover:bg-[#ffd2ca] transform hover:-translate-y-2 duration-400 rounded-tl-[100px] rounded-br-[100px] duration-200 text-[#6C372E] font-bold shadow-2xl shadow-[#b17a7a] mx-auto text-center">
+                    <a href={resumeSY} target="_blank" rel="noopener noreferrer" className="text-lg bg-gradient-to-tr from-[#ffc7bd] via-[#ffe1df] to-[#ffc7bd] py-3 px-16 cursor-pointer hover:bg-[#ffd2ca] transform hover:-translate-y-2 duration-400 rounded-tl-[100px] rounded-br-[100px] duration-200 text-[#421f18] font-bold shadow-2xl shadow-[#b17a7a] mx-auto text-center">
                       Download My Resume
                     </a>
                   </div>
@@ -233,7 +226,9 @@ export function App() {
             </div>
           </div>
         </section>
+        {/* ABOUT END */}
 
+        {/* SKILLS */}
         <section id="Skills">
           <div class="relative mt-[90px] w-full h-screen bg-cover bg-center bg-[url('/Users/yshru/WebsiteTailwindVite/my-project/src/assets/bg2.png')]">
             <div className="flex flex-col space-y-[440px]">
@@ -243,23 +238,23 @@ export function App() {
                   transition={{ duration: 0.9 }}
                   viewport={{ once: true }}
                 >
-                <div className="font-medium text-black text-[90px] text-center">SKILLS</div>
+                <div className="font-medium text-[#421f18] text-[90px] text-center">SKILLS</div>
               </motion.span>
               
               <motion.span
-                  initial={{ y: 250, opacity: 0 }}
+                  initial={{ y: 300, opacity: 0 }}
                   whileInView={{ y: 5, opacity: 1 }}
                   transition={{ duration: 0.9 }}
                   viewport={{ once: true }}
                 >
-                <div className="font-medium text-black text-[160px] text-center">PROJECTS</div>
+                <div className="font-medium text-[#421f18] text-[160px] text-center">PROJECTS</div>
               </motion.span>
             </div>
             
             <motion.span
                 initial={{ y: 300, opacity: 0 }}
                 whileInView={{ y: 5, opacity: 1 }}
-                transition={{ duration: 0.9 }}
+                transition={{ duration: 0.2 }}
                 viewport={{ once: true }}
               >
               <div className="flex flex-col">
@@ -286,28 +281,30 @@ export function App() {
             </motion.span>
           </div>
         </section>
+        {/* SKILLS END */}
 
-
+        {/* PROJECTS */}
         <section id="Projects"> 
           
         </section>
-
+        {/* PROJECTS END */}
 
         {/* CONTACT */}
         <section id="Contact">
         <div className="flex flex-row space-x-4 min-w-screen min-h-screen bg-gradient-to-tr from-[#ffc7bd] via-[#ffe3e1] to-[#ffc7bd]">
-          <form className="min-h-screen flex flex-col bg-[#ffffff] p-32">
+          
+          <form onSubmit={handleSubmit} className="min-h-screen flex flex-col bg-[#ffffff] p-32">
             <div className="flex flex-col space-y-24">
               <div className="text-[#6C372E] text-[25px]"> Send a pigeon! </div>
               <div className="flex flex-row space-x-32">
-                <input type="text" name="name" placeholder="Full Name" className="p-2 border-b border-[#6C372E]" />
-                <input type="tel" name="phone" placeholder="Phone Number" className="p-2 border-b border-[#6C372E]" />
+                <input required type="text" name="name" placeholder="Full Name" className="p-2 border-b border-[#6C372E]" />
+                <input required type="tel" name="phone" placeholder="Phone Number" className="p-2 border-b border-[#6C372E]" />
               </div>
-              <input type="email" name="email" placeholder="Email" className="p-2 border-b border-[#6C372E]" />
-              <textarea name="message" placeholder="Your Message" className="p-2 border-b border-[#6C372E] h-10"></textarea>
+              <input required type="email" name="email" placeholder="Email" className="p-2 border-b border-[#6C372E]" />
+              <textarea required name="message" placeholder="Your Message" className="p-2 border-b border-[#6C372E] h-10"></textarea>
               <button 
-                type="submit" 
-                className="text-md bg-gradient-to-tr from-[#ffc7bd] via-[#ffe1df] to-[#ffc7bd] py-2 px-12 cursor-pointer hover:bg-[#ffd2ca] transform hover:-translate-y-2 duration-400 rounded-tl-[100px] rounded-br-[100px] duration-200 text-[#6C372E] font-bold shadow-2xl shadow-[#b17a7a] mx-auto text-center">
+                type="submit" name="message"
+                className="text-lg bg-gradient-to-tr from-[#ffc7bd] via-[#ffe1df] to-[#ffc7bd] py-3 px-16 cursor-pointer hover:bg-[#ffd2ca] transform hover:-translate-y-2 duration-400 rounded-tl-[100px] rounded-br-[100px] duration-200 text-[#6C372E] font-bold shadow-2xl shadow-[#935d5d] mx-auto text-center">
                 Send! 
               </button>
             </div>
@@ -339,11 +336,9 @@ export function App() {
           </div>
         </div>
       </section>
-
-        {/* CONTACT END */}
+      {/* CONTACT END */}
       </div>
     </>
   );
 }
-
 export default App;
