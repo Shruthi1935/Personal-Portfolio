@@ -11,6 +11,7 @@ import { useNavigate } from 'react-router-dom';
 import profile1 from '/src/assets/1.jpeg';
 import resumeSY from '/src/assets/resume.pdf';
 import contact from '/Users/yshru/WebsiteTailwindVite/my-project/src/assets/Contact5.png'
+import coogify from '/Users/yshru/WebsiteTailwindVite/my-project/src/assets/CoogifyMusic.png'
 import Swal from 'sweetalert2'
 //import logo from '/src/assets/SYLogo.svg';
 
@@ -283,11 +284,23 @@ export function App()
         </section>
         {/* SKILLS END */}
 
+
+
+
         {/* PROJECTS */}
         <section id="Projects"> 
-          
+          <div className="flex flex-row items-center justify-center bg-[#FFF6F4] mb-10 ml-[185px] mr-[185px] p-44">
+            <div className="flex flex-row items-center justify-center">
+              <a href="https://github.com/Shruthi1935" target="_blank">
+                <img src={coogify} alt="Coogify Music"/>
+              </a>
+            </div>
+          </div>
         </section>
         {/* PROJECTS END */}
+
+
+
 
         {/* CONTACT */}
         <section id="Contact">
