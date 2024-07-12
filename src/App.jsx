@@ -25,7 +25,8 @@ import { FlipWords } from "/Users/yshru/WebsiteTailwindVite/my-project/component
 import { FaGithub, FaLinkedin, FaFigma, FaPython, FaHtml5, FaReact, FaNodeJs, FaNpm, FaGit, FaEnvelope} from 'react-icons/fa';
 import { SiTailwindcss, SiTypescript, SiMysql, SiVite, SiCplusplus, SiJavascript, SiNotion } from 'react-icons/si';
 import { FaPhone } from 'react-icons/fa';
-import { IconHome, IconMessage, IconUser } from "@tabler/icons-react";
+import { FaArrowLeft, FaArrowRight } from 'react-icons/fa';
+// import { IconHome, IconMessage, IconUser } from "@tabler/icons-react";
 // still need sql icon
 
 import { cn } from "/Users/yshru/WebsiteTailwindVite/my-project/utils/cn5.js";
@@ -37,14 +38,6 @@ import { IconClipboardCopy, IconFileBroken, IconSignature, IconTableColumn} from
 export function App() 
 {
   const words = ["Hello,", "Hola,", "नमस्ते,", "안녕하세요,", "హలో,"];
-  const slides = [
-   {
-    url: coogify
-   },
-   {
-    url: portfolio
-   },
-  ];
 
   const IconBG = ({ children }) => (
     <div className="flex p-4 w-[65px] h-[65px] items-center justify-center radial-gradient rounded-full transform hover:-translate-y-2 duration-300 shadow-xl shadow-[#ae7474]">
@@ -79,6 +72,28 @@ export function App()
       });
     }
   };
+
+  const slides = [
+    {
+     url: coogify
+    },
+    {
+     url: portfolio
+    },
+   ];
+
+   const [currentIndex, setCurrentIndex] = useState(0);
+
+   const prevSlide = () => {
+     const isFirstSlide = currentIndex === 0;
+     const newIndex = isFirstSlide ? slides.length - 1 : currentIndex - 1;
+     setCurrentIndex(newIndex);
+   }
+   const nextSlide = () => {
+     const isLastSlide = currentIndex === slides.length - 1;
+     const newIndex = isLastSlide ? 0 : currentIndex + 1;
+     setCurrentIndex(newIndex);
+   }
 
   return (
     <>
@@ -311,12 +326,18 @@ export function App()
             >
               <div className="relative">
                 <div 
-                  style={{backgroundImage: `url(${slides[0].url})`, width: '750px', height: '500px'}} 
-                  className="w-full h-full bg-center bg-cover duration-500">
+                  style={{backgroundImage: `url(${slides[currentIndex].url})`, width: '750px', height: '500px'}} 
+                  className="w-full h-full bg-center bg-cover duration-500 m-28">
                 </div>
               </div>
-            
 
+              <div className="absolute top-[50%] left-5 flex flex-row cursor-pointer text-[#421f18]">
+                <FaArrowLeft onClick={prevSlide} size={30}/>
+              </div>
+
+              <div className="absolute top-[50%] right-5 flex flex-row cursor-pointer text-[#421f18]">
+                <FaArrowRight onClick={nextSlide} size={30}/>
+              </div>
 
 
             </motion.span>
