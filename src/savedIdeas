@@ -602,3 +602,27 @@ viewport={{ once: true }}
             </div>
           </div>
         </section>
+
+        {/* PROJECTS */}
+        <section id="Projects"> 
+          
+          <div className="flex flex-row items-center justify-center bg-[#FFF6F4] mb-32 ml-[185px] mr-[185px]">
+            <motion.span
+              initial={{ y: 300, opacity: 0 }}
+              whileInView={{ y: 5, opacity: 1 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+            >
+            <div className="flex flex-row items-center justify-center p-28">
+              <a href="https://github.com/Shruthi1935" target="_blank">
+                <img src={coogify} alt="Coogify Music" className="rounded-lg transform hover:-translate-y-3 duration-300"/>
+              </a>
+              <a href="https://github.com/Shruthi1935/Personal-Portfolio" target="_blank">
+                <img src={portfolio} alt="Personal Portfolio" className="rounded-lg transform hover:-translate-y-3 duration-300"/>
+              </a>
+            </div>
+            </motion.span>
+          </div>        
+
+        </section>
+        {/* PROJECTS END */}

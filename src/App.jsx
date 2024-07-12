@@ -11,7 +11,8 @@ import { useNavigate } from 'react-router-dom';
 import profile1 from '/src/assets/1.jpeg';
 import resumeSY from '/src/assets/resume.pdf';
 import contact from '/Users/yshru/WebsiteTailwindVite/my-project/src/assets/Contact5.png'
-import coogify from '/Users/yshru/WebsiteTailwindVite/my-project/src/assets/CoogifyMusic.png'
+import coogify from '/Users/yshru/WebsiteTailwindVite/my-project/public/assets/CoogifyMusic.jpg'
+import portfolio from '/Users/yshru/WebsiteTailwindVite/my-project/public/assets/PersonalPortfolio.jpg'
 import Swal from 'sweetalert2'
 //import logo from '/src/assets/SYLogo.svg';
 
@@ -36,6 +37,14 @@ import { IconClipboardCopy, IconFileBroken, IconSignature, IconTableColumn} from
 export function App() 
 {
   const words = ["Hello,", "Hola,", "नमस्ते,", "안녕하세요,", "హలో,"];
+  const slides = [
+   {
+    url: coogify
+   },
+   {
+    url: portfolio
+   },
+  ];
 
   const IconBG = ({ children }) => (
     <div className="flex p-4 w-[65px] h-[65px] items-center justify-center radial-gradient rounded-full transform hover:-translate-y-2 duration-300 shadow-xl shadow-[#ae7474]">
@@ -214,7 +223,11 @@ export function App()
                       <span className="hover:bg-[#ffe0de] p-1 rounded-md"> curiosity</span>.
                       I invite you to explore the projects I've dedicated my time and 
                       <span className="hover:bg-[#ffe0de] p-1 rounded-md"> knowledge</span> 
-                      to, each representing a token of my growth and experience fostered through hardwork and amazing professors.
+                      to, each representing a token of my
+                      <span className="hover:bg-[#ffe0de] p-1 rounded-md"> growth</span> 
+                      and 
+                      <span className="hover:bg-[#ffe0de] p-1 rounded-md"> experience</span>  
+                      fostered through hardwork and amazing professors.
                       Click down below to access my 
                       <span className="hover:bg-[#ffd7d4] p-1 rounded-md">resume</span> right here!
                     </p>
@@ -232,7 +245,7 @@ export function App()
         {/* SKILLS */}
         <section id="Skills">
           <div class="relative mt-[90px] w-full h-screen bg-cover bg-center bg-[url('/Users/yshru/WebsiteTailwindVite/my-project/src/assets/bg2.png')]">
-            <div className="flex flex-col space-y-[440px]">
+            <div className="flex flex-col space-y-[500px]">
               <motion.span
                   initial={{ y: 300, opacity: 0 }}
                   whileInView={{ y: 5, opacity: 1 }}
@@ -289,13 +302,25 @@ export function App()
 
         {/* PROJECTS */}
         <section id="Projects"> 
-          <div className="flex flex-row items-center justify-center bg-[#FFF6F4] mb-10 ml-[185px] mr-[185px] p-44">
-            <div className="flex flex-row items-center justify-center">
-              <a href="https://github.com/Shruthi1935" target="_blank">
-                <img src={coogify} alt="Coogify Music"/>
-              </a>
-            </div>
-          </div>
+          <div className="flex flex-row items-center justify-center bg-[#FFF6F4] mb-32 mx-[185px]">
+            <motion.span
+              initial={{ y: 300, opacity: 0 }}
+              whileInView={{ y: 5, opacity: 1 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+            >
+              <div className="relative">
+                <div 
+                  style={{backgroundImage: `url(${slides[0].url})`, width: '750px', height: '500px'}} 
+                  className="w-full h-full bg-center bg-cover duration-500">
+                </div>
+              </div>
+            
+
+
+
+            </motion.span>
+          </div>        
         </section>
         {/* PROJECTS END */}
 
