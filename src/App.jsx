@@ -11,8 +11,8 @@ import { useNavigate } from 'react-router-dom';
 import profile1 from '/src/assets/1.jpeg';
 import resumeSY from '/src/assets/resume.pdf';
 import contact from '/Users/yshru/WebsiteTailwindVite/my-project/src/assets/Contact5.png'
-import coogify from '/Users/yshru/WebsiteTailwindVite/my-project/public/assets/CoogifyMusic.jpg'
-import portfolio from '/Users/yshru/WebsiteTailwindVite/my-project/public/assets/PersonalPortfolio.jpg'
+import coogify from '/Users/yshru/WebsiteTailwindVite/my-project/public/assets/CoogifyMusic.png'
+import portfolio from '/Users/yshru/WebsiteTailwindVite/my-project/public/assets/PersonalPortfolio.png'
 import Swal from 'sweetalert2'
 //import logo from '/src/assets/SYLogo.svg';
 
@@ -22,10 +22,11 @@ import { FlipWords } from "/Users/yshru/WebsiteTailwindVite/my-project/component
 // import { FloatingNav } from "/Users/yshru/WebsiteTailwindVite/my-project/components/floating-navbar.jsx";
 // import { Me } from "/Users/yshru/WebsiteTailwindVite/my-project/components/moreAboutMe.jsx";
 
-import { FaGithub, FaLinkedin, FaFigma, FaPython, FaHtml5, FaReact, FaNodeJs, FaNpm, FaGit, FaEnvelope} from 'react-icons/fa';
-import { SiTailwindcss, SiTypescript, SiMysql, SiVite, SiCplusplus, SiJavascript, SiNotion } from 'react-icons/si';
-import { FaPhone } from 'react-icons/fa';
-import { FaArrowLeft, FaArrowRight } from 'react-icons/fa';
+import { FaGithub, FaLinkedin, FaFigma, FaPython, FaHtml5, FaReact, FaNodeJs, FaNpm, FaGit, FaCss3} from 'react-icons/fa';
+import { SiTailwindcss, SiTypescript, SiMysql, SiVite, SiCplusplus, SiJavascript, SiNotion, SiBookstack, SiR} from 'react-icons/si';
+import { FaPhone, FaEnvelope } from 'react-icons/fa';
+import { FaArrowLeft, FaArrowRight, FaDatabase } from 'react-icons/fa';
+
 // import { IconHome, IconMessage, IconUser } from "@tabler/icons-react";
 // still need sql icon
 
@@ -40,7 +41,7 @@ export function App()
   const words = ["Hello,", "Hola,", "नमस्ते,", "안녕하세요,", "హలో,"];
 
   const IconBG = ({ children }) => (
-    <div className="flex p-4 w-[65px] h-[65px] items-center justify-center radial-gradient rounded-full transform hover:-translate-y-2 duration-300 shadow-xl shadow-[#ae7474]">
+    <div className="flex text-[#421f18] bg-gradient-to-tr from-[#fec3b9] via-[#ffdedc] to-[#fec3b9]  p-4 w-[65px] h-[65px] items-center justify-center rounded-full transform hover:-translate-y-2 duration-300 shadow-lg shadow-[#ae7474]">
       {children}
     </div>
   );
@@ -75,14 +76,19 @@ export function App()
 
   const slides = [
     {
-     url: 'http://3.18.22.13:5173/',
+     img: coogify,
+     url: "http://3.18.22.13:5173/",
      description: "A user-interactive website that allows listeners and artists to create, stream, and like/dislike music & albums while carrying other functionalities parallel to Apple Music and Spotify.",
-     tools: [<FaHtml5/>, <SiTailwindcss/>, <FaReact/>, <SiJavascript/>, <SiTypescript/>, <SiMysql/>, <FaNodeJs/>, <SiVite/>, <FaGithub/>, <FaFigma/>]
+     tools: [<FaHtml5/>, <SiTailwindcss/>, <SiJavascript/>, <SiTypescript/>, <FaDatabase/>, <FaGit/>, <FaReact/>, <SiMysql/>, <FaNodeJs/>],
+     github: [<a href="https://github.com/Shruthi1935?tab=overview&from=2024-07-01&to=2024-07-12" target="_blank" rel="noopener noreferrer"> GitHub </a>],
+     figma: [<a href="https://www.figma.com/proto/ltTh4kdESnNopkHbfQzhZy/Coogify-Music-Interface?node-id=1000-25&starting-point-node-id=1000%3A25" target="_blank" rel="noopener noreferrer"> Figma </a>],
     },
     {
-     url: portfolio,
+     img: portfolio,
      description: "A made-from-scratch website that showcases personal/academic projects, skills/technologies learned, and a method of contact to learn more about me!",
-     tools: [<FaHtml5/>, <SiTailwindcss/>, <FaReact/>, <SiJavascript/>, <FaNodeJs/>, <SiVite/>, <FaGithub/>, <FaFigma/>]
+     tools: [<FaHtml5/>, <SiTailwindcss/>, <FaCss3/>, <SiJavascript/>, <FaGit/>, <FaReact/>, <FaNodeJs/>],
+     github: [<a href="https://github.com/Shruthi1935/Personal-Portfolio" target="_blank" rel="noopener noreferrer"> GitHub </a>],
+     figma: [<a href="https://github.com/Shruthi1935/Personal-Portfolio" target="_blank" rel="noopener noreferrer"> Figma </a>],
     },
    ];
 
@@ -263,7 +269,7 @@ export function App()
 
         {/* SKILLS */}
         <section id="Skills">
-          <div class="relative mt-[90px] w-full h-screen bg-cover bg-center bg-[url('/Users/yshru/WebsiteTailwindVite/my-project/src/assets/bg2.png')]">
+          <div class="relative mt-[90px] w-full h-screen bg-cover bg-center bg-[url('/Users/yshru/WebsiteTailwindVite/my-project/src/assets/bg22.png')]">
             <div className="flex flex-col space-y-[500px]">
               <motion.span
                   initial={{ y: 300, opacity: 0 }}
@@ -295,15 +301,18 @@ export function App()
                   <IconBG> <FaPython className=""/> </IconBG>
                   <IconBG> <SiCplusplus className=""/> </IconBG>
                   <IconBG> <FaHtml5 className="" /> </IconBG>
+                  <IconBG> <FaCss3 className=""/> </IconBG>
                   <IconBG> <SiTailwindcss className=""/> </IconBG>
                   <IconBG> <SiJavascript className=""/></IconBG>
                   <IconBG> <SiTypescript className=""/> </IconBG>
+                  <IconBG> <FaDatabase className=""/> </IconBG>
+                  <IconBG> <SiR className=""/> </IconBG>
                   <IconBG> <FaGit className=""/> </IconBG>
-                  <IconBG> <SiMysql className=""/> </IconBG>
+                </div>
+                <div className="absolute inset-0 top-1/4 mt-[80px] flex flex-row space-x-8 text-[40px] justify-center text-[#FFF6F4]">
                   <IconBG> <FaReact className="" /> </IconBG>
                   <IconBG> <FaNodeJs className="" /> </IconBG>
-                </div>
-                <div className="absolute inset-0 top-1/4 mt-[60px] flex flex-row space-x-8 text-[40px] justify-center text-[#FFF6F4]">
+                  <IconBG> <SiMysql className=""/> </IconBG>
                   <IconBG> <FaNpm className="" /> </IconBG>
                   <IconBG> <SiVite className=""/> </IconBG>
                   <IconBG> <FaGithub className="" /> </IconBG>
@@ -321,7 +330,7 @@ export function App()
 
         {/* PROJECTS */}
         <section id="Projects"> 
-          <div className="flex flex-row items-center justify-center bg-[#FFF6F4] mb-32 mx-[185px]">
+          <div className="flex flex-row items-center justify-center bg-[#FFF6F4] mb-32 mx-[185px] shadow-outline shadow-2xl shadow-[#ae7474]">
             <motion.span
               initial={{ y: 300, opacity: 0 }}
               whileInView={{ y: 5, opacity: 1 }}
@@ -329,16 +338,23 @@ export function App()
               viewport={{ once: true }}
             >
               <div className="relative flex flex-col items-center">
-                <div style={{backgroundImage: `url(${slides[currentIndex].url})`, width: '790px', height: '500px'}} className="flex flex-col w-full h-full bg-center bg-cover duration-500 mt-28 mb-12"></div>
-                <div className="text-xl  text-[#421f18] duration-500 mx-44 mb-8"> {slides[currentIndex].description} </div> 
+                <div 
+                  onClick={() => window.open(slides[currentIndex].url, "_blank")} 
+                  style={{backgroundImage: `url(${slides[currentIndex].img})`, width: '790px', height: '500px'}} 
+                  className="cursor-pointer flex flex-col w-full h-full bg-center bg-cover duration-500 mt-28 mb-12"></div>
+                  <div className="text-xl text-[#421f18] duration-500 mx-44 mb-8"> {slides[currentIndex].description} 
+                </div> 
               </div>
-              <div className="flex flex-row space-x-8 text-4xl text-[#421f18] duration-500 mx-44 mb-24 hover:text-[#ffb2af]"> {slides[currentIndex].tools} </div> 
+              <div className="flex flex-row space-x-8 text-4xl text-[#421f18] duration-500 mx-44 mb-10 hover:text-[#ffb2af]"> {slides[currentIndex].tools} </div> 
+              <div className="flex flex-row space-x-8 mb-24 text-xl text-[#421f18] mx-44">
+                <div className="text-center border border-[#421f18] rounded-full px-8 py-1 duration-500 hover:-translate-y-2 cursor-pointer"> {slides[currentIndex].github} </div> 
+                <div className="text-center border border-[#421f18] rounded-full px-8 py-1 duration-500 hover:-translate-y-2 cursor-pointer"> {slides[currentIndex].figma} </div> 
+              </div>
 
-              <div className="absolute top-[45%] left-28 cursor-pointer text-[#421f18]">
+              <div className="absolute top-[38%] left-28 cursor-pointer text-[#421f18]">
                 <FaArrowLeft onClick={prevSlide} size={30}/>
               </div>
-
-              <div className="absolute top-[45%] right-28 cursor-pointer text-[#421f18]">
+              <div className="absolute top-[38%] right-28 cursor-pointer text-[#421f18]">
                 <FaArrowRight onClick={nextSlide} size={30}/>
               </div>
 
@@ -390,6 +406,9 @@ export function App()
                   </a>
                   <a href="https://www.linkedin.com/in/shruthi-yenamagandla-23883428b/" target="_blank" rel="noopener noreferrer">
                     <FaLinkedin className="hover:text-[#0e76a8] hover:-translate-y-1 duration-400 duration-200" />
+                  </a>
+                  <a href={resumeSY} target="_blank" rel="noopener noreferrer">
+                    <SiBookstack className="hover:-translate-y-1 duration-400 duration-200" />
                   </a>
                 </div>
               </div>
