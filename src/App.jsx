@@ -75,10 +75,14 @@ export function App()
 
   const slides = [
     {
-     url: coogify
+     url: 'http://3.18.22.13:5173/',
+     description: "A user-interactive website that allows listeners and artists to create, stream, and like/dislike music & albums while carrying other functionalities parallel to Apple Music and Spotify.",
+     tools: [<FaHtml5/>, <SiTailwindcss/>, <FaReact/>, <SiJavascript/>, <SiTypescript/>, <SiMysql/>, <FaNodeJs/>, <SiVite/>, <FaGithub/>, <FaFigma/>]
     },
     {
-     url: portfolio
+     url: portfolio,
+     description: "A made-from-scratch website that showcases personal/academic projects, skills/technologies learned, and a method of contact to learn more about me!",
+     tools: [<FaHtml5/>, <SiTailwindcss/>, <FaReact/>, <SiJavascript/>, <FaNodeJs/>, <SiVite/>, <FaGithub/>, <FaFigma/>]
     },
    ];
 
@@ -324,21 +328,19 @@ export function App()
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
-              <div className="relative">
-                <div 
-                  style={{backgroundImage: `url(${slides[currentIndex].url})`, width: '750px', height: '500px'}} 
-                  className="w-full h-full bg-center bg-cover duration-500 m-28">
-                </div>
+              <div className="relative flex flex-col items-center">
+                <div style={{backgroundImage: `url(${slides[currentIndex].url})`, width: '790px', height: '500px'}} className="flex flex-col w-full h-full bg-center bg-cover duration-500 mt-28 mb-12"></div>
+                <div className="text-xl  text-[#421f18] duration-500 mx-44 mb-8"> {slides[currentIndex].description} </div> 
               </div>
+              <div className="flex flex-row space-x-8 text-4xl text-[#421f18] duration-500 mx-44 mb-24 hover:text-[#ffb2af]"> {slides[currentIndex].tools} </div> 
 
-              <div className="absolute top-[50%] left-5 flex flex-row cursor-pointer text-[#421f18]">
+              <div className="absolute top-[45%] left-28 cursor-pointer text-[#421f18]">
                 <FaArrowLeft onClick={prevSlide} size={30}/>
               </div>
 
-              <div className="absolute top-[50%] right-5 flex flex-row cursor-pointer text-[#421f18]">
+              <div className="absolute top-[45%] right-28 cursor-pointer text-[#421f18]">
                 <FaArrowRight onClick={nextSlide} size={30}/>
               </div>
-
 
             </motion.span>
           </div>        

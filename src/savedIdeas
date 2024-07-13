@@ -603,26 +603,33 @@ viewport={{ once: true }}
           </div>
         </section>
 
-        {/* PROJECTS */}
-        <section id="Projects"> 
-          
-          <div className="flex flex-row items-center justify-center bg-[#FFF6F4] mb-32 ml-[185px] mr-[185px]">
-            <motion.span
-              initial={{ y: 300, opacity: 0 }}
-              whileInView={{ y: 5, opacity: 1 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-            >
-            <div className="flex flex-row items-center justify-center p-28">
-              <a href="https://github.com/Shruthi1935" target="_blank">
-                <img src={coogify} alt="Coogify Music" className="rounded-lg transform hover:-translate-y-3 duration-300"/>
-              </a>
-              <a href="https://github.com/Shruthi1935/Personal-Portfolio" target="_blank">
-                <img src={portfolio} alt="Personal Portfolio" className="rounded-lg transform hover:-translate-y-3 duration-300"/>
-              </a>
-            </div>
-            </motion.span>
-          </div>        
+        
+{/* PROJECTS */}
+<section id="Projects"> 
+<div className="flex flex-row items-center justify-center bg-[#FFF6F4] mb-32 mx-[185px]">
+  <motion.span
+    initial={{ y: 300, opacity: 0 }}
+    whileInView={{ y: 5, opacity: 1 }}
+    transition={{ duration: 0.8 }}
+    viewport={{ once: true }}
+  >
+    <div className="relative">
+      <div style={{backgroundImage: `url(${slides[currentIndex].url})`, width: '750px', height: '500px'}} className="flex flex-col w-full h-full bg-center bg-cover duration-500 m-28">
+        <div className="absolute top-[100%] pt-8">
+        ...
+        </div>
+      </div>
+    </div>
 
-        </section>
-        {/* PROJECTS END */}
+    <div className="absolute top-[50%] left-5 flex flex-row cursor-pointer text-[#421f18]">
+      <FaArrowLeft onClick={prevSlide} size={30}/>
+    </div>
+
+    <div className="absolute top-[50%] right-5 flex flex-row cursor-pointer text-[#421f18]">
+      <FaArrowRight onClick={nextSlide} size={30}/>
+    </div>
+
+  </motion.span>
+</div>        
+</section>
+{/* PROJECTS END */}
