@@ -269,8 +269,8 @@ export function App()
 
         {/* SKILLS */}
         <section id="Skills">
-          <div class="relative mt-[90px] w-full h-screen bg-cover bg-center bg-[url('/Users/yshru/WebsiteTailwindVite/my-project/src/assets/bg22.png')]">
-            <div className="flex flex-col space-y-[500px]">
+          <div class="relative mt-[60px] w-full h-screen bg-cover bg-center bg-[url('/Users/yshru/WebsiteTailwindVite/my-project/src/assets/bg.png')]">
+            <div className="flex flex-col space-y-[490px]">
               <motion.span
                   initial={{ y: 300, opacity: 0 }}
                   whileInView={{ y: 5, opacity: 1 }}
@@ -286,7 +286,7 @@ export function App()
                   transition={{ duration: 0.9 }}
                   viewport={{ once: true }}
                 >
-                <div className="font-medium text-[#421f18] text-[160px] text-center">PROJECTS</div>
+                <div className="font-medium text-[#421f18] text-[170px] text-center">PROJECTS</div>
               </motion.span>
             </div>
             
@@ -330,7 +330,7 @@ export function App()
 
         {/* PROJECTS */}
         <section id="Projects"> 
-          <div className="flex flex-row items-center justify-center bg-[#FFF6F4] mb-32 mx-[185px] shadow-outline shadow-2xl shadow-[#ae7474]">
+          <div className="flex flex-row items-center justify-center bg-[#FFF6F4] mb-32 mx-[193px] shadow-outline shadow-2xl shadow-[#ae7474]">
             <motion.span
               initial={{ y: 300, opacity: 0 }}
               whileInView={{ y: 5, opacity: 1 }}
@@ -342,10 +342,10 @@ export function App()
                   onClick={() => window.open(slides[currentIndex].url, "_blank")} 
                   style={{backgroundImage: `url(${slides[currentIndex].img})`, width: '790px', height: '500px'}} 
                   className="cursor-pointer flex flex-col w-full h-full bg-center bg-cover duration-500 mt-28 mb-12"></div>
-                  <div className="text-xl text-[#421f18] duration-500 mx-44 mb-8"> {slides[currentIndex].description} 
+                  <div className="text-xl text-[#421f18] duration-500 mx-44 mb-6"> {slides[currentIndex].description} 
                 </div> 
               </div>
-              <div className="flex flex-row space-x-8 text-4xl text-[#421f18] duration-500 mx-44 mb-10 hover:text-[#ffb2af]"> {slides[currentIndex].tools} </div> 
+              <div className="flex flex-row space-x-8 text-3xl text-[#421f18] duration-500 mx-44 mb-6 hover:text-[#ffb2af]"> {slides[currentIndex].tools} </div> 
               <div className="flex flex-row space-x-8 mb-24 text-xl text-[#421f18] mx-44">
                 <div className="text-center border border-[#421f18] rounded-full px-8 py-1 duration-500 hover:-translate-y-2 cursor-pointer"> {slides[currentIndex].github} </div> 
                 <div className="text-center border border-[#421f18] rounded-full px-8 py-1 duration-500 hover:-translate-y-2 cursor-pointer"> {slides[currentIndex].figma} </div> 
