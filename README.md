@@ -1,8 +1,5 @@
 # Shruthi’s Personal Portfolio – Read Me
 
-**bold text**
-*italic text*
-
 ### Hey there, thanks for stopping by my repository!
 *This is a made-from-scratch website that exhibits my personal/academic projects, skills & technologies learned, and a method of contact to learn more about me! This portfolio repository contains the primary codebase for the project with the necessary files and assets used to create my website.*
 
@@ -35,4 +32,3 @@ If you would like to visit my website, it can be accessed right here at ________
 
 
 If you would like to get in contact to learn more about me, feel free to reach out at yshruthi.14@gmail.com. Thank you for visiting!
-![image](https://github.com/user-attachments/assets/3899d34a-0301-4f84-84c6-66d7a2ab6710)
