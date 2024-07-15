@@ -80,16 +80,15 @@ export function App()
      url: "http://3.18.22.13:5173/",
      description: "A user-interactive website that allows listeners and artists to create, stream, and like/dislike music & albums while carrying other functionalities parallel to Apple Music and Spotify.",
      tools: [<FaHtml5/>, <SiTailwindcss/>, <SiJavascript/>, <SiTypescript/>, <FaDatabase/>, <FaGit/>, <FaReact/>, <SiMysql/>, <FaNodeJs/>],
-     github: [<a href="https://github.com/Shruthi1935?tab=overview&from=2024-07-01&to=2024-07-12" target="_blank" rel="noopener noreferrer"> GitHub </a>],
-     figma: [<a href="https://www.figma.com/proto/ltTh4kdESnNopkHbfQzhZy/Coogify-Music-Interface?node-id=1000-25&starting-point-node-id=1000%3A25" target="_blank" rel="noopener noreferrer"> Figma </a>],
+     links: [<a href="https://github.com/Shruthi1935?tab=overview&from=2024-07-01&to=2024-07-12" target="_blank" rel="noopener noreferrer"> GitHub </a>, 
+             <a href="https://www.figma.com/proto/ltTh4kdESnNopkHbfQzhZy/Coogify-Music-Interface?node-id=1000-25&starting-point-node-id=1000%3A25" target="_blank" rel="noopener noreferrer"> Figma </a>]
     },
     {
      img: portfolio,
      description: "A made-from-scratch website that showcases personal/academic projects, skills/technologies learned, and a method of contact to learn more about me!",
      tools: [<FaHtml5/>, <SiTailwindcss/>, <FaCss3/>, <SiJavascript/>, <FaGit/>, <FaReact/>, <FaNodeJs/>],
-     github: [<a href="https://github.com/Shruthi1935/Personal-Portfolio" target="_blank" rel="noopener noreferrer"> GitHub </a>],
-     figma: [<a href="https://github.com/Shruthi1935/Personal-Portfolio" target="_blank" rel="noopener noreferrer"> Figma </a>],
-    },
+     links: [<a href="https://github.com/Shruthi1935/Personal-Portfolio" target="_blank" rel="noopener noreferrer"> GitHub </a>]
+    }
    ];
 
    const [currentIndex, setCurrentIndex] = useState(0);
@@ -345,12 +344,14 @@ export function App()
                   <div className="text-xl text-[#421f18] duration-500 mx-44 mb-6"> {slides[currentIndex].description} 
                 </div> 
               </div>
-              <div className="flex flex-row space-x-8 text-3xl text-[#421f18] duration-500 mx-44 mb-6 hover:text-[#ffb2af]"> {slides[currentIndex].tools} </div> 
-              <div className="flex flex-row space-x-8 mb-24 text-xl text-[#421f18] mx-44">
-                <div className="text-center border border-[#421f18] rounded-full px-8 py-1 duration-500 hover:-translate-y-2 cursor-pointer"> {slides[currentIndex].github} </div> 
-                <div className="text-center border border-[#421f18] rounded-full px-8 py-1 duration-500 hover:-translate-y-2 cursor-pointer"> {slides[currentIndex].figma} </div> 
+              <div className="flex flex-row space-x-8 text-3xl text-[#421f18] mx-44 mb-8 hover:text-[#ffb2af] duration-500"> {slides[currentIndex].tools} </div> 
+              <div className="flex flex-row space-x-8 text-xl text-[#421f18] mx-44 mb-24"> 
+                {slides[currentIndex].links.map((link, index) => (
+                  <div key={index} className="cursor-pointer duration-500 hover:-translate-y-2 border border-[#421f18] rounded-full text-center px-6 py-1">
+                    {link}
+                  </div>
+                ))}
               </div>
-
               <div className="absolute top-[38%] left-28 cursor-pointer text-[#421f18]">
                 <FaArrowLeft onClick={prevSlide} size={30}/>
               </div>
