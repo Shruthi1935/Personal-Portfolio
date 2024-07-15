@@ -1,8 +1,34 @@
-# React + Vite
+# Shruthi’s Personal Portfolio – Read Me
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+### Hey there, thanks for stopping by my repository!
+*This is a made-from-scratch website that exhibits my personal/academic projects, skills & technologies learned, and a method of contact to learn more about me! This portfolio repository contains the primary codebase for the project with the necessary files and assets used to create my website.*
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Live Demo
+If you would like to visit my website, it can be accessed right here at _____________.
+
+
+## Portfolio Highlights
+- **About Me Section**: This section is an introduction of myself where you’ll get to know more about me.
+
+- **Skills Section**: The skills section showcases the languages and technologies learned and have been exposed to.
+
+- **Projects Section**: This section contains the academic and personal projects where it demonstrates the skills listed above.
+
+- **Contact/Socials Section**: A contact section where socials and contact field is present to get in contact via email or phone.
+
+
+
+## Technology Stack
+- **HTML**: To structure the content of the website.
+
+- **CSS / Tailwind CSS**: To style the website and ensure a modern design.
+
+- **JavaScript**: To add interactivity and enhance the user experience.
+
+- **React**: For building the user interface with reusable components.
+
+- **Git**: Used for version control.
+
+
+If you would like to get in contact to learn more about me, feel free to reach out at yshruthi.14@gmail.com. Thank you for visiting!
