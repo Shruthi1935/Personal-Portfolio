@@ -85,9 +85,10 @@ export function App()
     },
     {
      img: portfolio,
+     url: "https://shruthi1935.github.io/Personal-Portfolio/",
      description: "A made-from-scratch website that showcases personal/academic projects, skills/technologies learned, and a method of contact to learn more about me!",
      tools: [<FaHtml5/>, <SiTailwindcss/>, <FaCss3/>, <SiJavascript/>, <FaGit/>, <FaReact/>, <FaNodeJs/>],
-     links: [<a href="https://github.com/Shruthi1935/Personal-Portfolio" target="_blank" rel="noopener noreferrer"> GitHub </a>]
+     links: [<a href="https://github.com/Shruthi1935/Personal-Portfolio" target="_blank" rel="noopener noreferrer"> GitHub </a>] 
     }
    ];
 
