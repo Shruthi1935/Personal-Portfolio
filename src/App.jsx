@@ -13,6 +13,7 @@ import resumeSY from '/src/assets/resume.pdf';
 import contact from '/Users/yshru/WebsiteTailwindVite/my-project/src/assets/Contact5.png'
 import coogify from '/Users/yshru/WebsiteTailwindVite/my-project/public/assets/CoogifyMusic.png'
 import portfolio from '/Users/yshru/WebsiteTailwindVite/my-project/public/assets/PersonalPortfolio.png'
+import gg from '/Users/yshru/WebsiteTailwindVite/my-project/public/assets/gourmetGrotto.png'
 import Swal from 'sweetalert2'
 //import logo from '/src/assets/SYLogo.svg';
 
@@ -22,8 +23,8 @@ import { FlipWords } from "/Users/yshru/WebsiteTailwindVite/my-project/component
 // import { FloatingNav } from "/Users/yshru/WebsiteTailwindVite/my-project/components/floating-navbar.jsx";
 // import { Me } from "/Users/yshru/WebsiteTailwindVite/my-project/components/moreAboutMe.jsx";
 
-import { FaGithub, FaLinkedin, FaFigma, FaPython, FaHtml5, FaReact, FaNodeJs, FaNpm, FaGit, FaCss3} from 'react-icons/fa';
-import { SiTailwindcss, SiTypescript, SiMysql, SiVite, SiCplusplus, SiJavascript, SiNotion, SiBookstack, SiR} from 'react-icons/si';
+import { FaGithub, FaLinkedin, FaFigma, FaPython, FaHtml5, FaReact, FaNodeJs, FaNpm, FaGit, FaCss3, FaNextJs} from 'react-icons/fa';
+import { SiTailwindcss, SiTypescript, SiMysql, SiVite, SiCplusplus, SiJavascript, SiNotion, SiBookstack, SiR, SiFirebase} from 'react-icons/si';
 import { FaPhone, FaEnvelope } from 'react-icons/fa';
 import { FaArrowLeft, FaArrowRight, FaDatabase } from 'react-icons/fa';
 
@@ -89,7 +90,15 @@ export function App()
      description: "A made-from-scratch website that showcases personal/academic projects, skills/technologies learned, and a method of contact to learn more about me!",
      tools: [<FaHtml5/>, <SiTailwindcss/>, <FaCss3/>, <SiJavascript/>, <FaGit/>, <FaReact/>, <FaNodeJs/>],
      links: [<a href="https://github.com/Shruthi1935/Personal-Portfolio" target="_blank" rel="noopener noreferrer"> GitHub </a>] 
-    }
+    },
+    {
+      img: gg,
+      url: "https://inventory-tracking-system-jb8mlqf68.vercel.app/",
+      description: "This app is an inventory management system that allows users to view, search, add, remove, and delete items from a Firestore database. It displays items with their quantities, enabling users to update the quantity or delete items as needed, while also providing real-time updates and feedback on operations.",
+      tools: [<FaCss3/>, <SiTailwindcss/>, <SiJavascript/>, <FaReact/>, <FaNextJs/>, <FaGit/>, <SiFirebase/>],
+      links: [<a href="https://github.com/Shruthi1935/Inventory-Tracking-System" target="_blank" rel="noopener noreferrer"> GitHub </a>,
+              <a href="https://www.figma.com/design/1mVV4sZLKanna0Jq62nKcF/Pantry-Tracker?node-id=0-1&t=wT3zNsPYz8Ah6C16-0" target="_blank" rel="noopener noreferrer"> Figma </a>]
+     }
    ];
 
    const [currentIndex, setCurrentIndex] = useState(0);
@@ -312,9 +321,11 @@ export function App()
                 <div className="absolute inset-0 top-1/4 mt-[80px] flex flex-row space-x-8 text-[40px] justify-center text-[#FFF6F4]">
                   <IconBG> <FaReact className="" /> </IconBG>
                   <IconBG> <FaNodeJs className="" /> </IconBG>
-                  <IconBG> <SiMysql className=""/> </IconBG>
-                  <IconBG> <FaNpm className="" /> </IconBG>
+                  <IconBG> <FaNextJs className=""/> </IconBG>
                   <IconBG> <SiVite className=""/> </IconBG>
+                  <IconBG> <SiMysql className=""/> </IconBG>
+                  <IconBG> <SiFirebase className=""/> </IconBG>
+                  <IconBG> <FaNpm className="" /> </IconBG>
                   <IconBG> <FaGithub className="" /> </IconBG>
                   <IconBG> <FaFigma className="" /> </IconBG>
                   <IconBG> <SiNotion className=""/> </IconBG>
